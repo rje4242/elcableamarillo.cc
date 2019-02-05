@@ -10,7 +10,7 @@ const github = {
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/'
+    base: '/ECA/'
   }
 } : {}
 
