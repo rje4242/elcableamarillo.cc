@@ -1,0 +1,48 @@
+export default {
+  'primaria': [
+    'detector-de-presencia',
+    'coche-con-mando'
+  ],
+  'secundaria': [
+    'hola-mundo',
+    'luz-intermitente',
+    'luz-alterna',
+    'semaforo-simple',
+    'semaforo-peatones',
+    'sensor-de-temperatura',
+    'servomotor-0-180',
+    'rgb-anodo-comun',
+    'rgb-catodo-comun',
+    'luces-aleatorias',
+    'la-guerra-de-las-galaxias',
+    'pulsador-simple',
+    'medidor-de-distancias',
+    'detector-de-aparcamiento',
+    'coche-fantastico',
+    'encendido-nocturno',
+    'rgb-crepuscular',
+    'regulador-de-luz',
+    'servomotor-manual',
+    'theremin-electronico',
+    'bye-bye',
+    'make-a-wish',
+    'volando-globos',
+    'reciclaje',
+    'evita-a-los-fantasmas',
+    'alarma-personal',
+    'sensor-baja-toldo',
+    'barrera-accionada-por-pulsador',
+    'barrera-de-aparcamiento',
+    'juego-de-simon',
+    'semaforo-con-pulsador',
+    'preguntar-con-arduino',
+    'sensor-de-aparcamiento-led',
+    'extractor-con-sensor-de-temperatura',
+    'ascensor-con-indicadores'
+  ],
+  'bachillerato': [
+    'cubo-de-leds-2x2x2',
+    'maquina-para-dibujar',
+    'semaforo-con-microfono'
+  ],
+}
