@@ -17,3 +17,12 @@ install:
 
 script:
   - echo "Skipping tests"
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $ECA_ACCESS_TOKEN
+  target-branch: gh-pages
+  local-dir: dist
+  on:
+    branch: master
