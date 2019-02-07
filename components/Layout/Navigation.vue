@@ -3,7 +3,7 @@
 
     <v-card class="logo" elevation="0">
       <router-link to="/">
-        <img src="/logo.png" />
+        <img src="~/static/logo.png" />
       </router-link>
     </v-card>
 
