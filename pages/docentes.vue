@@ -6,6 +6,34 @@
     <v-flex 
       xs12
     >
+      <v-card>
+        <v-card-title>
+          Docentes
+          <v-spacer />
+          <v-text-field
+            v-model="search"
+            append-icon="search"
+            label="Buscar"
+            single-line
+            hide-details
+          />
+        </v-card-title>
+        <v-data-table
+          :headers="headers"
+          :items="teachers"
+          :search="search"
+          :pagination.sync="pagination"
+        >
+          <template slot="items" slot-scope="props">
+            <td>{{ props.item.name }}</td>
+            <td>{{ props.item.github }}</td>
+          </template>
+          <v-alert slot="no-results" :value="true" color="error" icon="warning">
+            Your search for "{{ search }}" found no results.
+          </v-alert>
+        </v-data-table>
+      </v-card>
+      <!--
       <h3 
         class="display-1 mb-3 font-weight-medium"
       >
@@ -21,6 +49,7 @@
           />
         </v-list-tile>
       </v-list>
+      -->
     </v-flex>
   </v-container>
 </template>
@@ -32,6 +61,18 @@ export default {
   head: () => ({
     title: 'Docentes'
   }),
+  data() {
+    return {
+      search: '',
+      headers: [
+        { text: 'Nombre', value: 'name' },
+        { text: 'Github', value: 'github' }
+      ],
+      pagination: {
+        rowsPerPage: 10
+      }
+    }
+  },
   async fetch({ store }) {
     const params = {
       name: 'all'
