@@ -1,8 +1,22 @@
 <template>
-  <v-container fluid grid-list-md>
-    <v-layout row wrap>
-      <v-flex xs12 sm6 md4 v-for="project in projects" :key="project.data.sulg">
-        <project :project="project"></project>
+  <v-container
+    fluid
+    grid-list-md
+  >
+    <v-layout
+      row
+      wrap
+    >
+      <v-flex
+        v-for="project in projects"
+        :key="project.data.sulg"
+        xs12
+        sm6
+        md4
+      >
+        <project
+          :project="project" 
+        />
       </v-flex>
     </v-layout>
   </v-container>
@@ -19,9 +33,7 @@ export default {
   head: () => ({
     title: 'Prácticas'
   }),
-  data: () => ({
-  }),
-  async fetch ({ store, params }) {
+  async fetch({ store, params }) {
     await store.dispatch('project/getProjects', params)
   },
   computed: {

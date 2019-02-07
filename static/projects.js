@@ -1,9 +1,6 @@
 export default {
-  'primaria': [
-    'detector-de-presencia',
-    'coche-con-mando'
-  ],
-  'secundaria': [
+  primaria: ['detector-de-presencia', 'coche-con-mando'],
+  secundaria: [
     'hola-mundo',
     'luz-intermitente',
     'luz-alterna',
@@ -40,9 +37,9 @@ export default {
     'extractor-con-sensor-de-temperatura',
     'ascensor-con-indicadores'
   ],
-  'bachillerato': [
+  bachillerato: [
     'cubo-de-leds-2x2x2',
     'maquina-para-dibujar',
     'semaforo-con-microfono'
-  ],
+  ]
 }

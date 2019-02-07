@@ -1,21 +1,30 @@
 <template>
   <v-hover>
-    <v-card class="card"
+    <v-card 
       slot-scope="{ hover }"
       :class="`elevation-${hover ? 12 : 2}`"
+      class="card"
+    >
+      <router-link 
+        :to="to(project)"
       >
-      <router-link :to="to(project)">
         <v-img
-          v-bind:src="project.data.image"
-          lazy-src="/loading.png"
+          :src="project.data.image"
+          lazy-src="~/static/loading.png"
           aspect-ratio="1.5"
         />
       </router-link>
-      <v-card-title primary-title>
-        <h3 class="title mb-3 font-weight-bold">
+      <v-card-title 
+        primary-title
+      >
+        <h3
+          class="title mb-3 font-weight-bold"
+        >
           {{ project.data.title }}
         </h3>
-        <div class="subheading font-weight-light">
+        <div
+          class="subheading font-weight-light"
+        >
           {{ project.data.description }}
         </div>
       </v-card-title>
@@ -32,12 +41,10 @@ export default {
       default: null
     }
   },
-  data: () => ({
-  }),
   methods: {
-    to (project) {
-      let category = project.data.category
-      let slug = project.data.slug
+    to(project) {
+      const category = project.data.category
+      const slug = project.data.slug
       return category + '/' + slug
     }
   }

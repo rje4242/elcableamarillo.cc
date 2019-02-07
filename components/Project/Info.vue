@@ -1,35 +1,59 @@
 <template>
   <v-card>
     <v-card-title>
-      <h3 class="title">{{ title() }}</h3>
+      <h3
+        class="title"
+      >
+        {{ title() }}
+      </h3>
     </v-card-title>
-    <v-card-text class="pt-2 pl-0">
-      <v-list class="pa-0">
-        <template v-for="item in info()">
-          <v-list-tile :key="item.icon">
+    <v-card-text
+      class="pt-2 pl-0"
+    >
+      <v-list 
+        class="pa-0"
+      >
+        <template 
+          v-for="item in info()"
+        >
+          <v-list-tile
+            :key="item.icon"
+          >
             <v-list-tile-action>
-              <v-icon v-text="item.icon"></v-icon>
+              <v-icon v-text="item.icon" />
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title v-text="item.text"></v-list-tile-title>
+              <v-list-tile-title v-text="item.text" />
             </v-list-tile-content>
           </v-list-tile>
         </template>
       </v-list>
     </v-card-text>
-    <v-divider></v-divider>
+    <v-divider />
     <v-card-title>
-      <h3 class="title">Autor</h3>
+      <h3
+        class="title"
+      >
+        Autor
+      </h3>
     </v-card-title>
     <v-card-text>
-      <Authors :authors="authors()" />
+      <Authors 
+        :authors="authors()" 
+      />
     </v-card-text>
-    <v-divider></v-divider>
+    <v-divider />
     <v-card-title>
-      <h3 class="title">Etiquetas</h3>
+      <h3
+        class="title"
+      >
+        Etiquetas
+      </h3>
     </v-card-title>
     <v-card-text>
-      <Tags :tags="tags()" />
+      <Tags 
+        :tags="tags()"
+      />
     </v-card-text>
   </v-card>
 </template>
@@ -40,35 +64,32 @@ import Tags from '@/components/Project/Tags'
 
 export default {
   name: 'Info',
+  components: {
+    Authors,
+    Tags
+  },
   props: {
     project: {
       type: Object,
       default: null
     }
   },
-  components: {
-    Authors,
-    Tags
-  },
   methods: {
-    title () {
+    title() {
       return this.project.title
     },
-    authors () {
+    authors() {
       return this.project.authors
     },
-    tags () {
+    tags() {
       return this.project.tags.split(',')
     },
-    info () {
-      return [
-        { icon: 'school', text: this.project.level }
-      ]
+    info() {
+      return [{ icon: 'school', text: this.project.level }]
     }
   }
 }
 </script>
 
 <style lang="scss" scope>
-
 </style>

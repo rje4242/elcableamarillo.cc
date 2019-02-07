@@ -1,11 +1,33 @@
 <template>
-  <v-container fluid grid-list-md>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md3 order-md9>
-        <Info :project="project.data" />
+  <v-container
+    fluid 
+    grid-list-md
+  >
+    <v-layout
+      row 
+      wrap
+    >
+      <v-flex
+        xs12
+        sm12
+        md3
+        order-md9
+      >
+        <Info
+          :project="project.data" 
+        />
       </v-flex>
-      <v-flex xs12 sm12 md9 order-md3>
-        <vue-markdown class="content">{{ content() }}</vue-markdown>
+      <v-flex
+        xs12
+        sm12
+        md9 
+        order-md3
+      >
+        <vue-markdown 
+          class="content"
+        >
+          {{ content() }}
+        </vue-markdown>
       </v-flex>
     </v-layout>
   </v-container>
@@ -26,12 +48,12 @@ export default {
     VueMarkdown,
     Info
   },
-  head () {
-    let title = this.project.data.title
-    let description = this.project.data.description
-    let tags = this.project.data.tags
-    let image = this.project.data.image
-    let url = this.$route.path
+  head() {
+    const title = this.project.data.title
+    const description = this.project.data.description
+    const tags = this.project.data.tags
+    const image = this.project.data.image
+    const url = this.$route.path
     return {
       title: title,
       meta: [
@@ -48,7 +70,7 @@ export default {
       ]
     }
   },
-  async fetch ({ store, params }) {
+  async fetch({ store, params }) {
     await store.dispatch('project/getItem', params)
   },
   computed: {
@@ -58,18 +80,19 @@ export default {
       }
     })
   },
-  mounted () {
-    let targets = document.querySelectorAll('code')
-    targets.forEach((target) => {
+  mounted() {
+    const targets = document.querySelectorAll('code')
+    targets.forEach(target => {
       hljs.highlightBlock(target)
     })
   },
   methods: {
-    content () {
-      let data = this.project.data
-      let content = this.project.content
-      content = content.split('![](').join('![' + data.title + '](' + data.url + '/')
+    content() {
+      const data = this.project.data
+      const content = this.project.content
       return content
+        .split('![](')
+        .join('![' + data.title + '](' + data.url + '/')
     }
   }
 }
@@ -78,7 +101,7 @@ export default {
 <style lang='scss' scope>
 .content {
   font-size: 18px;
-  h1{
+  h1 {
     margin: 0 0 20px;
   }
   h2 {
@@ -88,7 +111,7 @@ export default {
   }
   img {
     max-width: 640px;
-    width: 100%
+    width: 100%;
   }
   pre {
     margin: 10px 0 20px;
@@ -97,10 +120,13 @@ export default {
   table {
     margin: 0 0 20px;
   }
-  table, th, td {
+  table,
+  th,
+  td {
     border: 1px solid #f0f0f0;
   }
-  th, td {
+  th,
+  td {
     padding: 5px;
   }
 }

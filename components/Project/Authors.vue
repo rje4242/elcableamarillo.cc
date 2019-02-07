@@ -1,8 +1,13 @@
 <template>
   <div>
-    <v-chip v-for="author in authors" :key="author.github">
+    <v-chip
+      v-for="author in authors"
+      :key="author.github"
+    >
       <v-avatar>
-        <img v-bind:src="avatar(author)">
+        <img 
+          :src="avatar(author)"
+        >
       </v-avatar>
       {{ author.name }}
     </v-chip>
@@ -14,12 +19,13 @@ export default {
   name: 'Authors',
   props: {
     authors: {
-      type: Array
+      type: Array,
+      default: () => []
     }
   },
   methods: {
-    avatar (author) {
-      let username = (author.github ? author.github : 'ElCableAmarillo')
+    avatar(author) {
+      const username = author.github ? author.github : 'ElCableAmarillo'
       return process.env.github.avatar + username
     }
   }
@@ -27,5 +33,4 @@ export default {
 </script>
 
 <style lang="scss" scope>
-
 </style>

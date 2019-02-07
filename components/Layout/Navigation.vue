@@ -1,29 +1,26 @@
 <template>
   <div>
-
     <v-card class="logo" elevation="0">
       <router-link to="/">
-        <img src="~/static/logo.png" title="El Cable Amarillo" />
+        <img src="~/static/logo.png" title="El Cable Amarillo">
       </router-link>
     </v-card>
-
-    <v-divider></v-divider>
-
+    <v-divider />
     <v-list>
       <template v-for="item in navigation">
-        <v-list-tile :to="item.link" :key="item.link">
+        <v-list-tile :key="item.link" :to="item.link">
           <v-list-tile-action>
-            <v-icon v-text="item.icon"></v-icon>
+            <v-icon v-text="item.icon" />
           </v-list-tile-action>
-          <v-list-tile-title v-text="item.title"></v-list-tile-title>
+          <v-list-tile-title v-text="item.title" />
         </v-list-tile>
         <v-list-tile v-for="subitem in item.items" :key="subitem.title" :to="subitem.link">
           <v-list-tile-action>
-            <v-icon></v-icon>
+            <v-icon />
           </v-list-tile-action>
-          <v-list-tile-title v-text="subitem.title"></v-list-tile-title>
+          <v-list-tile-title v-text="subitem.title" />
         </v-list-tile>
-        <v-divider :key="item.title"></v-divider>
+        <v-divider :key="item.title" />
       </template>
     </v-list>
   </div>
@@ -34,11 +31,13 @@ export default {
   name: 'Navigation',
   data: () => ({
     navigation: [
-      { title: 'Proyecto',
+      {
+        title: 'Proyecto',
         icon: 'dashboard',
         link: '/proyecto'
       },
-      { title: 'Prácticas',
+      {
+        title: 'Prácticas',
         icon: 'folder',
         link: '/practicas',
         items: [
@@ -47,12 +46,14 @@ export default {
           { title: 'Bachillerato', link: '/practicas/bachillerato' }
         ]
       },
-      { title: 'Docentes',
+      {
+        title: 'Docentes',
         icon: 'group',
         link: '/docentes'
       }
       /*
-      { title: 'Blog',
+      { 
+        title: 'Blog',
         icon: 'local_library',
         link: '/blog'
       }

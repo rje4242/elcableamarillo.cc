@@ -1,6 +1,9 @@
 <template>
   <div>
-    <v-alert :value="true" type="warning" >
+    <v-alert
+      :value="true"
+      type="warning"
+    >
       En estos momentos no hay artículos en el blog
     </v-alert>
   </div>
@@ -8,12 +11,13 @@
 
 <script>
 export default {
-  head () {
+  head() {
     return {
       title: 'Blog'
     }
-  },
-  data: () => ({
-  })
+  }
 }
 </script>
+
+<style lang="scss" scope>
+</style>
