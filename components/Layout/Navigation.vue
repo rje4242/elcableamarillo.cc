@@ -3,7 +3,7 @@
 
     <v-card class="logo" elevation="0">
       <router-link to="/">
-        <img src="~/static/logo.png" />
+        <img src="~/static/logo.png" title="El Cable Amarillo" />
       </router-link>
     </v-card>
 
