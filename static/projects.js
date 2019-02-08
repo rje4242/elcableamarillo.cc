@@ -21,6 +21,7 @@ export default {
     'regulador-de-luz',
     'servomotor-manual',
     'theremin-electronico',
+    'luces-de-feria',
     'bye-bye',
     'make-a-wish',
     'volando-globos',
