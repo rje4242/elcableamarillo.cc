@@ -3,6 +3,14 @@ import projects from './static/projects.js'
 const nodeExternals = require('webpack-node-externals')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
+const seo = {
+  title: 'El Cable Amarillo',
+  description:
+    'Proyecto educativo de código abierto para fomentar el uso de la programación y robótica en los centros educativos utilizando herramientas de software y hardware libre',
+  keywords:
+    'programación, robótica, arduino, educación, primaria, secundaria, murcia',
+  image: '/default.png'
+}
 const github = {
   web: 'https://github.com/',
   raw: 'https://raw.githubusercontent.com',
@@ -22,6 +30,12 @@ module.exports = {
   ...routerBase,
   env: {
     projects: projects,
+    seo: {
+      title: seo.title,
+      description: seo.description,
+      keywords: seo.keywords,
+      image: seo.image
+    },
     github: {
       web: `${github.web}/${github.user}/${github.practicas}`,
       raw: `${github.raw}/${github.user}/${github.practicas}/master`,

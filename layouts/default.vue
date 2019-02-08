@@ -47,9 +47,28 @@ export default {
     Navigation,
     Footer
   },
-  head: () => ({
-    title: 'El Cable Amarillo'
-  }),
+  head() {
+    const title = process.env.seo.title
+    const description = process.env.seo.description
+    const tags = process.env.seo.keywords
+    const image = process.env.seo.image
+    const url = this.$route.path
+    return {
+      title: title,
+      meta: [
+        { name: 'description', content: description },
+        { name: 'keywords', content: tags },
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: description },
+        { property: 'og:image', content: image },
+        { property: 'og:url', content: url },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: image }
+      ]
+    }
+  },
   data: () => ({
     drawer: true
   })

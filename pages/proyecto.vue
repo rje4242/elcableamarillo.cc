@@ -140,9 +140,14 @@
 
 <script>
 export default {
-  head: () => ({
-    title: 'Proyecto El Cable Amarillo'
-  }),
+  head() {
+    const title = 'Proyecto Educativo: El Cable Amarillo'
+    const url = this.$route.path
+    return {
+      title: title,
+      meta: [{ property: 'og:url', content: url }]
+    }
+  },
   data: () => ({
     editions: [
       {

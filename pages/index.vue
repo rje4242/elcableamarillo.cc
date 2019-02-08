@@ -41,9 +41,7 @@
 
 <script>
 export default {
-  head: () => ({
-    title: 'El Cable Amarillo'
-  })
+  // Override head layout/default
 }
 </script>
 
