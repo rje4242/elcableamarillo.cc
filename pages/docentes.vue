@@ -25,31 +25,14 @@
           :pagination.sync="pagination"
         >
           <template slot="items" slot-scope="props">
+            <td>{{ props.item.count }}</td>
             <td>{{ props.item.name }}</td>
-            <td>{{ props.item.github }}</td>
           </template>
           <v-alert slot="no-results" :value="true" color="error" icon="warning">
-            Your search for "{{ search }}" found no results.
+            No se han encontrado resultados para "{{ search }}".
           </v-alert>
         </v-data-table>
       </v-card>
-      <!--
-      <h3 
-        class="display-1 mb-3 font-weight-medium"
-      >
-        Docentes
-      </h3>
-      <v-list>
-        <v-list-tile
-          v-for="(teacher, index) in teachers"
-          :key="index"
-        >
-          <v-list-tile-title 
-            v-text="teacher.name" 
-          />
-        </v-list-tile>
-      </v-list>
-      -->
     </v-flex>
   </v-container>
 </template>
@@ -65,10 +48,12 @@ export default {
     return {
       search: '',
       headers: [
-        { text: 'Nombre', value: 'name' },
-        { text: 'Github', value: 'github' }
+        { text: 'Prácticas', value: 'count', sortable: false, width: 10 },
+        { text: 'Nombre', value: 'name', sortable: false }
       ],
       pagination: {
+        sortBy: 'count',
+        descending: true,
         rowsPerPage: 10
       }
     }
@@ -83,10 +68,16 @@ export default {
     ...mapState({
       teachers: state => {
         const teachers = []
-        state.project.list.map(p => {
-          return p.data.authors.map(author => {
-            const resultado = teachers.find(t => t.name === author.name)
+        state.project.list.map(project => {
+          return project.data.authors.map(author => {
+            const resultado = teachers.find((teacher, index) => {
+              if (teacher.name === author.name) {
+                teachers[index].count++
+              }
+              return teacher.name === author.name
+            })
             if (resultado === undefined) {
+              author.count = 1
               teachers.push(author)
             }
           })
