@@ -63,7 +63,7 @@ export const actions = {
         projects = primaria.concat(secundaria).concat(bachillerato)
     }
 
-    const promises = projects.map(async slug => {
+    const promises = await projects.map(async slug => {
       await axios
         .get(`${process.env.github.raw}/${slug}/README.md`)
         .then(res => {
