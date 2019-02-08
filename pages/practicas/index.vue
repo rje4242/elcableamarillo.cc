@@ -3,6 +3,16 @@
     fluid
     grid-list-md
   >
+    <h1
+      class="pb-3 display-1 font-weight-medium primary--text"
+    >
+      Prácticas
+    </h1>
+    <div class="pb-5 subheading">
+      <p>
+        Este repositorio de prácticas supone una aventura y una nueva forma de enfocar la programación y robótica en todas las etapas educativas.
+      </p>
+    </div>
     <v-layout
       row
       wrap
@@ -14,6 +24,15 @@
         sm6
         md4
       >
+        <!--
+        <v-btn
+          round
+          color="primary"
+          dark
+          :to="category.link"
+        >
+          {{ category.title }}
+        </v-btn>
         <v-card>
           <router-link 
             :to="category.link"
@@ -32,6 +51,7 @@
             </div>
           </v-card-title>
         </v-card>
+        -->
       </v-flex>
     </v-layout>
   </v-container>
