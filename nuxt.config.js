@@ -45,6 +45,7 @@ module.exports = {
   },
   generate: {
     routes: async function() {
+      const h = ['/', '/404']
       const p = await projects.primaria.map(p => {
         return '/practicas/primaria/' + p
       })
@@ -54,15 +55,18 @@ module.exports = {
       const b = await projects.bachillerato.map(p => {
         return '/practicas/bachillerato/' + p
       })
-      return Promise.all([p, s, b]).then(values => {
-        return [...values[0], ...values[1], ...values[2]]
+      return Promise.all([h, p, s, b]).then(values => {
+        return [...values[0], ...values[1], ...values[2], ...values[3]]
       })
     }
   },
   modules: ['@nuxtjs/axios'],
   plugins: ['~/plugins/vuetify.js'],
   css: ['~/assets/style/app.styl'],
-  loading: { color: '#bf1733' },
+  loading: { 
+    color: '#ffee00',
+    height: '3px'
+  },
   build: {
     transpile: [/^vuetify/],
     plugins: [new VuetifyLoaderPlugin()],
