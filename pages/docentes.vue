@@ -3,6 +3,7 @@
     fluid
     grid-list-md
   >
+    <Metas :seo="metas" />
     <v-flex 
       xs12
     >
@@ -39,13 +40,22 @@
 
 <script>
 import { mapState } from 'vuex'
+import Metas from '@/components/Layout/Metas'
 
 export default {
-  head: () => ({
-    title: 'Docentes'
-  }),
+  components: {
+    Metas
+  },
   data() {
     return {
+      // Default metas => nuxt.config
+      metas: {
+        title: 'Docentes',
+        description:
+          'Maestros y profesores colaboradores del proyecto educativo El Cable Amarillo',
+        keywords: 'maestros, profesores, colabora, compartir, proyectos'
+        // image: ''
+      },
       search: '',
       headers: [
         { text: 'Prácticas', value: 'count', sortable: false, width: 10 },

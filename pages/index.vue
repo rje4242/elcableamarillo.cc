@@ -2,6 +2,7 @@
   <v-container
     fill-height
   >
+    <Metas :seo="metas" />
     <v-layout
       justify-center
       align-center
@@ -40,8 +41,16 @@
 </template>
 
 <script>
+import Metas from '@/components/Layout/Metas'
+
 export default {
-  // Override head layout/default
+  components: {
+    Metas
+  },
+  data: () => ({
+    // Default metas => nuxt.config
+    metas: {}
+  })
 }
 </script>
 

@@ -3,6 +3,7 @@
     fluid 
     grid-list-md
   >
+    <Metas :seo="metas" />
     <v-layout
       row 
       wrap
@@ -35,6 +36,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import Metas from '@/components/Layout/Metas'
 import VueMarkdown from 'vue-markdown'
 import Info from '@/components/Project/Info'
 
@@ -45,34 +47,32 @@ hljs.registerLanguage('arduino', cpp)
 
 export default {
   components: {
+    Metas,
     VueMarkdown,
     Info
   },
-  head() {
-    const title = this.project.data.title
-    const description = this.project.data.description
-    const tags = this.project.data.tags
-    const image = this.project.data.image
-    const url = this.$route.path
+  async asyncData({ store, params }) {
+    await store.dispatch('project/getItem', params)
+    const data = store.state.project.item.data
+    const title = data.title
+    const description = data.description
+    const keywords = data.tags
+    const image = data.image
     return {
-      title: title,
-      meta: [
-        { name: 'description', content: description },
-        { name: 'keywords', content: tags },
-        { property: 'og:title', content: title },
-        { property: 'og:description', content: description },
-        { property: 'og:image', content: image },
-        { property: 'og:url', content: url },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: image }
-      ]
+      // Default metas => nuxt.config
+      metas: {
+        title: title,
+        description: description,
+        keywords: keywords,
+        image: image
+      }
     }
   },
+  /*
   async fetch({ store, params }) {
     await store.dispatch('project/getItem', params)
   },
+  */
   computed: {
     ...mapState({
       project: state => {

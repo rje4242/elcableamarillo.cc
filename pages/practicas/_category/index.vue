@@ -3,6 +3,7 @@
     fluid
     grid-list-md
   >
+    <Metas :seo="metas" />
     <h1
       class="pb-3 display-1 font-weight-medium primary--text"
     >
@@ -34,34 +35,24 @@
 
 <script>
 import { mapState } from 'vuex'
+import Metas from '@/components/Layout/Metas'
 import Project from '@/components/Project'
 
 export default {
   components: {
+    Metas,
     Project
   },
-  head() {
-    const title = 'Prácticas ' + this.category
-    const description =
-      'Prácticas de programación y robótica para ' + this.category
-    const tags =
-      'prácticas, programación, robótica, educación, ' + this.category
-    // const image = this.project.data.image
-    const url = this.$route.path
+  asyncData({ params }) {
+    const category = params.category
     return {
-      title: title,
-      meta: [
-        { name: 'description', content: description },
-        { name: 'keywords', content: tags },
-        { property: 'og:title', content: title },
-        { property: 'og:description', content: description },
-        // { property: 'og:image', content: image },
-        { property: 'og:url', content: url },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:description', content: description }
-        // { name: 'twitter:image', content: image }
-      ]
+      // Default metas => nuxt.config
+      metas: {
+        title: `Prácticas ${category}`,
+        description: `Prácticas de programación y robótica para educación ${category}`,
+        keywords: `prácticas, programación, robótica, educación, ${category}`
+        // image: ''
+      }
     }
   },
   async fetch({ store, params }) {

@@ -3,6 +3,7 @@
     fluid
     grid-list-md
   >
+    <Metas :seo="metas" />
     <v-flex
       xs12
       sm12
@@ -139,16 +140,20 @@
 </template>
 
 <script>
+import Metas from '@/components/Layout/Metas'
+
 export default {
-  head() {
-    const title = 'Proyecto Educativo: El Cable Amarillo'
-    const url = this.$route.path
-    return {
-      title: title,
-      meta: [{ property: 'og:url', content: url }]
-    }
+  components: {
+    Metas
   },
   data: () => ({
+    // Default metas => nuxt.config
+    metas: {
+      title: 'Proyecto Educativo, El Cable Amarillo',
+      // description: '',
+      keywords: 'proyecto, open source, software libre, hardware libre'
+      // image: ''
+    },
     editions: [
       {
         year: '2019',
