@@ -23,9 +23,9 @@ module.exports = {
   env: {
     projects: projects,
     github: {
-      web: `${github.web}/${github.user}/${github.practicas}/`,
-      raw: `${github.raw}/${github.user}/${github.practicas}/master/`,
-      avatar: `${github.avatar}/`
+      web: `${github.web}/${github.user}/${github.practicas}`,
+      raw: `${github.raw}/${github.user}/${github.practicas}/master`,
+      avatar: `${github.avatar}`
     }
   },
   head: {

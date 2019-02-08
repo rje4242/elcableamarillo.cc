@@ -3,6 +3,7 @@ export default {
   secundaria: [
     'hola-mundo',
     'luz-intermitente',
+    /*
     'luz-alterna',
     'semaforo-simple',
     'semaforo-peatones',
@@ -36,10 +37,13 @@ export default {
     'sensor-de-aparcamiento-led',
     'extractor-con-sensor-de-temperatura',
     'ascensor-con-indicadores'
+    */
   ],
   bachillerato: [
     'cubo-de-leds-2x2x2',
     'maquina-para-dibujar',
+    /*
     'semaforo-con-microfono'
+    */
   ]
 }

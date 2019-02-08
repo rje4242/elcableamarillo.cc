@@ -24,24 +24,26 @@ export const mutations = {
 
 export const actions = {
   async getItem({ commit }, params) {
+    commit('INIT')
     commit('SET_CATEGORY', params.category)
-
-    const url = process.env.github.raw + params.slug
-    await axios.get(url + '/README.md').then(res => {
-      const json = matter(res.data)
-      json.data.category = params.category
-      json.data.url = process.env.github.raw + params.slug
-      json.data.image = json.data.url + '/practica.gif'
-      commit('SET_ITEM', json)
-    })
-    /*
-    .catch(function(error) {
-      const err = error.response.status + ': ' + error.response.config.url
-      console.log(err)
-    })
-    */
+    const slug = params.slug
+    await axios
+      .get(`${process.env.github.raw}/${slug}/README.md`)
+      .then(res => {
+        const project = matter(res.data)
+        project.data.category = params.category
+        project.data.url = `${process.env.github.raw}/${slug}`
+        project.data.image = `${process.env.github.raw}/${slug}/practica.gif`
+        project.data.slug = slug
+        commit('SET_ITEM', project)
+      })
+      .catch(error => {
+        error = `${error.response.status}: ${error.response.config.url}`
+        // console.log(error)
+      })
   },
   async getProjects({ commit }, params) {
+    commit('INIT')
     commit('SET_CATEGORY', params.category)
     const primaria = process.env.projects.primaria
     const secundaria = process.env.projects.secundaria
@@ -60,25 +62,23 @@ export const actions = {
       default:
         projects = primaria.concat(secundaria).concat(bachillerato)
     }
-    commit('INIT')
-    await Promise.all(
-      projects.map(async name => {
-        const url = process.env.github.raw + name + '/README.md'
-        await axios.get(url).then(res => {
-          const json = matter(res.data)
-          json.data.category = params.category
-          json.data.url = process.env.github.raw + name
-          json.data.image = json.data.url + '/practica.gif'
-          json.data.slug = name
-          commit('ADD_PROJECT', json)
+
+    const promises = projects.map(async slug => {
+      await axios
+        .get(`${process.env.github.raw}/${slug}/README.md`)
+        .then(res => {
+          const project = matter(res.data)
+          project.data.category = params.category
+          project.data.url = `${process.env.github.raw}/${slug}`
+          project.data.image = `${process.env.github.raw}/${slug}/practica.gif`
+          project.data.slug = slug
+          commit('ADD_PROJECT', project)
         })
-        /*
-        .catch(function (error) {
-          const err = error.response.status + ': ' + error.response.config.url
-          console.log(err)
+        .catch(error => {
+          error = `${error.response.status}: ${error.response.config.url}`
+          // console.log(error)
         })
-        */
-      })
-    )
+    })
+    await Promise.all(promises)
   }
 }

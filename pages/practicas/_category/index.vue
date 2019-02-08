@@ -9,7 +9,7 @@
     >
       <v-flex
         v-for="project in projects"
-        :key="project.data.sulg"
+        :key="project.data.slug"
         xs12
         sm6
         md4

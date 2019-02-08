@@ -26,7 +26,7 @@ export default {
   methods: {
     avatar(author) {
       const username = author.github ? author.github : 'ElCableAmarillo'
-      return process.env.github.avatar + username
+      return `${process.env.github.avatar}/${username}`
     }
   }
 }
