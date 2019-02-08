@@ -1,9 +1,25 @@
 <template>
   <v-container
-    fluid
-    grid-list-md
+    fill-height
   >
-    Error 404: Página no encontrada 
+    <v-layout
+      justify-center
+      align-center
+    >
+      <v-flex 
+        shrink
+      >
+        <div
+          class="main"
+        >
+          <h1 
+            class="display-1 font-weight-medium text-center"
+          >
+            Error 404: Página no encontrada
+          </h1>
+        </div>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
