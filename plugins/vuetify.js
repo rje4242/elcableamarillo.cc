@@ -6,8 +6,10 @@ import Vuetify, {
   VToolbar
 } from 'vuetify/lib'
 import { Ripple } from 'vuetify/lib/directives'
+import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 
 Vue.use(Vuetify, {
+  iconfont: 'fa',
   components: {
     VApp,
     VNavigationDrawer,

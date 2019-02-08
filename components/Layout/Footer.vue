@@ -1,41 +1,46 @@
 <template>
-  <v-footer 
-    class="footer mt-5"
+  <v-footer
+    app
+    absolute
+    inset
+    class="footer"
+    dark
     height="auto"
   >
-    <v-layout
-      justify-center
-      row
-      wrap
+    <v-card
+      class="flex"
+      flat
+      tile
     >
-      <v-flex
-        primary
-        pt-3
-        text-xs-center
-        white--text
-      >
-        <p>
-          Esta obra está bajo una licencia de
-          <a
-            target="_blank"
-            href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"
-          >
-            Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional
-          </a>
-          .
-        </p>
-        <p>
-          Made with &hearts; by
-          <a
-            class="made"
-            target="_blank"
-            href="https://github.com/migueabellan"
-          >
-            @migueabellan
-          </a>
-        </p>
-      </v-flex>
-    </v-layout>
+      <v-card-title class="primary">
+        <span>
+          Esta obra está bajo una licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional.
+        </span>
+        <v-spacer />
+        <v-btn
+          v-for="icon in icons"
+          :key="icon.icon"
+          :href="icon.link"
+          target="_blank"
+          class="mx-2 white--text"
+          icon
+        >
+          <v-icon size="24px">
+            {{ icon.icon }}
+          </v-icon>
+        </v-btn>
+      </v-card-title>
+      <v-card-actions class="primary darken-3 justify-center">
+        Made with &hearts; by&nbsp;
+        <a
+          class="yellow--text"
+          target="_blank"
+          href="https://github.com/migueabellan"
+        >
+          @migueabellan
+        </a>
+      </v-card-actions>
+    </v-card>
   </v-footer>
 </template>
 
@@ -43,7 +48,11 @@
 export default {
   name: 'Footer',
   data: () => ({
-    date: new Date().getFullYear()
+    date: new Date().getFullYear(),
+    icons: [
+      { icon: 'fab fa-github', link: 'https://github.com/ElCableAmarillo' },
+      { icon: 'fab fa-twitter', link: 'https://twitter.com/ElCableAmarillo' }
+    ]
   })
 }
 </script>
@@ -51,11 +60,6 @@ export default {
 <style lang="scss" scope>
 .footer {
   a {
-    color: #fff;
-    text-decoration: none;
-  }
-  a.made {
-    color: #ffee00;
     text-decoration: none;
   }
 }
