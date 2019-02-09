@@ -16,6 +16,8 @@ Como plantilla se ha utilizado [Vuetify.js][Vuetify], un framework progresivo de
 
 Esta web está alojada en este **repositorio público de GitHub**. En la rama *master* se encuentra el código de la aplicación mientras que en la rama *gh-pages* se almacena todo el código estático (html, js, css, etc.) generado por *Nuxt.js*.
 
+![GitHub, GitHub Pages](hosting.png)
+
 ### Integración continua
 
 El código sobre la rama master es testeado utilizando [Travis-CI][Travis]. Travis CI es un servicio de **integración continua** distribuido y alojado que se utiliza para crear y probar proyectos de software alojados en GitHub.
