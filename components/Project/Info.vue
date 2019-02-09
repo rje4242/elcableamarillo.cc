@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-card-title>
-      <h3
+      <h3 
         class="primary--text subheading font-weight-medium"
       >
         {{ title() }}
