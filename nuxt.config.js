@@ -3,6 +3,12 @@ import projects from './static/projects.js'
 const nodeExternals = require('webpack-node-externals')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
+const routerBase = {
+  router: {
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/' : '/'
+  }
+}
+
 const seo = {
   title: 'El Cable Amarillo',
   description:
@@ -17,12 +23,6 @@ const github = {
   avatar: 'https://avatars.githubusercontent.com',
   user: 'ElCableAmarillo',
   practicas: 'Practicas'
-}
-
-const routerBase = {
-  router: {
-    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/ECA/' : '/'
-  }
 }
 
 module.exports = {
