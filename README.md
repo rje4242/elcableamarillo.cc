@@ -10,6 +10,8 @@ Esta web está desarrollada utilizando [Nuxt.js][Nuxt], un **framework de javasc
 
 Como plantilla se ha utilizado [Vuetify.js][Vuetify], un framework progresivo de componentes para *Vue.js* sobre *Material Design*.
 
+![Vuejs, Nuxtjs, Vuetifyjs](frameworks.png)
+
 ### Hosting
 
 Esta web está alojada en este **repositorio público de GitHub**. En la rama *master* se encuentra el código de la aplicación mientras que en la rama *gh-pages* se almacena todo el código estático (html, js, css, etc.) generado por *Nuxt.js*.
