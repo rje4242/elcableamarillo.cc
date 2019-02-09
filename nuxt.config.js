@@ -14,7 +14,7 @@ const seo = {
   description:
     'Proyecto educativo de código abierto para fomentar el uso de la programación y robótica en los centros educativos utilizando herramientas de software y hardware libre',
   keywords:
-    'programación, robótica, arduino, educación, primaria, secundaria',
+    'programación, robótica, arduino, educación, primaria, secundaria, murcia',
   image: '/default.png'
 }
 const github = {

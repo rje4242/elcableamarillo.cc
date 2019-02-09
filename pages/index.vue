@@ -2,7 +2,8 @@
   <v-container
     fill-height
   >
-    <Metas :seo="metas"
+    <Metas
+      :seo="metas"
     />
     <v-layout
       justify-center
