@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 import Tags from '@/components/Project/Tags.vue'
 import Vuetify from 'vuetify'
 
-const tags = { 
+const tags = {
   tags: 'tag-1, tag-2, tag-3'
 }
 

@@ -3,9 +3,9 @@ import { mount } from '@vue/test-utils'
 import Info from '@/components/Project/Info.vue'
 import Vuetify from 'vuetify'
 
-const data = { 
+const data = {
   level: 'Level',
-  category: 'Category',
+  category: 'Category'
 }
 
 describe('Info', () => {

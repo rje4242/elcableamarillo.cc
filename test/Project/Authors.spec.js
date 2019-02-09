@@ -3,11 +3,11 @@ import { mount } from '@vue/test-utils'
 import Authors from '@/components/Project/Authors.vue'
 import Vuetify from 'vuetify'
 
-const authors = { 
-  authors: [ 
+const authors = {
+  authors: [
     { name: 'Name 1', github: 'username-1' },
-    { name: 'Name 2', github: '' } 
-  ],
+    { name: 'Name 2', github: '' }
+  ]
 }
 
 describe('Authors', () => {
