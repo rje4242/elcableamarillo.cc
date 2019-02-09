@@ -18,14 +18,13 @@ Esta web está alojada en este **repositorio público de GitHub**. En la rama *m
 
 ![GitHub, GitHub Pages](hosting.png)
 
-### Integración continua
+### Integración y despliegue continua
 
 El código sobre la rama master es testeado utilizando [Travis-CI][Travis]. Travis CI es un servicio de **integración continua** distribuido y alojado que se utiliza para crear y probar proyectos de software alojados en GitHub.
 
-### Despliegue continuo
-
 Una vez testeado el código de la rama master se procede al **despliegue contínuo** o automático en [GitHub Pages][gh-pages]. GitHub Pages es un servicio de alojamiento web ofrecido por GitHub para alojar páginas web estáticas para usuarios de GitHub.
 
+![Travis](ci.png)
 
 [Nuxt]: https://nuxtjs.org
 [Vue]: https://vuejs.org
