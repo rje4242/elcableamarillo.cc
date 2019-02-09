@@ -15,7 +15,13 @@
         order-md9
       >
         <Info
-          :project="project.data" 
+          :data="project.data" 
+        />
+        <Authors 
+          :authors="project.data.authors" 
+        />
+        <Tags 
+          :tags="project.data.tags" 
         />
       </v-flex>
       <v-flex
@@ -37,8 +43,10 @@
 <script>
 import { mapState } from 'vuex'
 import Metas from '@/components/Layout/Metas'
-import VueMarkdown from 'vue-markdown'
 import Info from '@/components/Project/Info'
+import Authors from '@/components/Project/Authors'
+import Tags from '@/components/Project/Tags'
+import VueMarkdown from 'vue-markdown'
 
 import hljs from 'highlight.js/lib/highlight'
 import 'highlight.js/styles/androidstudio.css'
@@ -48,8 +56,10 @@ hljs.registerLanguage('arduino', cpp)
 export default {
   components: {
     Metas,
-    VueMarkdown,
-    Info
+    Info,
+    Authors,
+    Tags,
+    VueMarkdown
   },
   async asyncData({ store, params }) {
     await store.dispatch('project/getItem', params)
