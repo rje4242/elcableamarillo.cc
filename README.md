@@ -1,8 +1,8 @@
-# elcableamarillo.github.io
+# elcableamarillo.cc
 
 > Página web de código abierto del proyecto educativo "El Cable Amarillo".
 
-[![Build Status](https://travis-ci.org/ElCableAmarillo/elcableamarillo.github.io.svg?branch=master)](https://travis-ci.org/ElCableAmarillo/elcableamarillo.github.io)
+[![Build Status](https://travis-ci.org/ElCableAmarillo/elcableamarillo.cc.svg?branch=master)](https://travis-ci.org/ElCableAmarillo/elcableamarillo.cc)
 
 ### Framework
 
