@@ -6,7 +6,7 @@
       class="card"
     >
       <router-link 
-        :to="to(project)"
+        :to="project.link"
       >
         <v-img
           :src="project.data.image"
@@ -39,13 +39,6 @@ export default {
     project: {
       type: Object,
       default: null
-    }
-  },
-  methods: {
-    to(project) {
-      const category = project.data.category
-      const slug = project.data.slug
-      return category + '/' + slug
     }
   }
 }
