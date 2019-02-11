@@ -39,8 +39,7 @@ export default {
       {
         title: 'Prácticas',
         icon: 'folder',
-        // link: '/practicas',
-        link: '',
+        link: '/practicas',
         items: [
           { title: 'Educación Primaria', link: '/practicas/primaria' },
           { title: 'Educación Secundaria', link: '/practicas/secundaria' },

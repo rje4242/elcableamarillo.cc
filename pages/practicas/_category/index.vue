@@ -3,17 +3,12 @@
     fluid
     grid-list-md
   >
-    <Metas :seo="metas" />
-    <h1
-      class="pb-3 display-1 font-weight-medium primary--text"
-    >
-      Prácticas {{ category }}
-    </h1>
-    <div class="pb-2 subheading">
-      <p>
-        Este repositorio de prácticas supone una aventura y una nueva forma de enfocar la programación y robótica en todas las etapas educativas.
-      </p>
-    </div>
+    <Metas
+      :seo="metas"
+    />
+    <PageTitle 
+      :page="metas"
+    />
     <v-layout
       row
       wrap
@@ -37,11 +32,13 @@
 import { mapGetters } from 'vuex'
 import seo from '@/static/seo.js'
 import Metas from '@/components/Layout/Metas'
+import PageTitle from '@/components/Layout/PageTitle'
 import Project from '@/components/Project'
 
 export default {
   components: {
     Metas,
+    PageTitle,
     Project
   },
   asyncData({ params, store }) {

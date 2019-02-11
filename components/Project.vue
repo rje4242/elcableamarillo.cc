@@ -11,19 +11,19 @@
         <v-img
           :src="project.data.image"
           lazy-src="~/static/loading.png"
-          aspect-ratio="1.5"
+          aspect-ratio="1.75"
         />
       </router-link>
       <v-card-title 
         primary-title
       >
         <h3
-          class="title mb-3 font-weight-bold"
+          class="title mb-3 font-weight-medium"
         >
           {{ project.data.title }}
         </h3>
         <div
-          class="subheading font-weight-light"
+          class="subheading font-weight-thin"
         >
           {{ project.data.description }}
         </div>

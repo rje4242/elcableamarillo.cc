@@ -16,25 +16,29 @@ export default {
   },
   practicas: {
     title: 'Prácticas',
-    description: 'Prácticas de programación y robótica',
+    description:
+      'Practicas educativas realizadas por docentes para introducir la programación y la robótica en todas las etapas educativas.',
     keywords: 'prácticas, programación, robótica',
     image: ''
   },
   primaria: {
-    title: 'Prácticas Primaria',
-    description: 'Prácticas de programación y robótica para educación primaria',
+    title: 'Prácticas para primaria',
+    description:
+      'Practicas educativas realizadas por docentes para introducir la programación y la robótica en educación primaria.',
     keywords: 'prácticas, programación, robótica, mblock, primaria',
     image: ''
   },
   secundaria: {
-    title: 'Prácticas Secundaria',
-    description: 'Prácticas de programación y robótica para educación primaria',
+    title: 'Prácticas para secundaria',
+    description:
+      'Practicas educativas realizadas por docentes para introducir la programación y la robótica en educación secundaria.',
     keywords: 'prácticas, programación, robótica, mblock, secundaria',
     image: ''
   },
   bachillerato: {
-    title: 'Prácticas Bachillerato',
-    description: 'Prácticas de programación y robótica para bachillerato',
+    title: 'Prácticas para bachillerato',
+    description:
+      'Practicas educativas realizadas por docentes para introducir la programación y la robótica en bachillerato.',
     keywords: 'prácticas, programación, robótica, arduino, bachillerato',
     image: ''
   }

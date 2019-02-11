@@ -16,7 +16,7 @@
         class="timeline"
       >
         <h3
-          class="display-1 mb-5 font-weight-medium"
+          class="display-1 mb-5 font-weight-regular"
         >
           Historia
         </h3>
@@ -55,7 +55,7 @@
     >
       <div class="colabora">
         <h3
-          class="display-1 mb-5 font-weight-medium"
+          class="display-1 mb-5 font-weight-regular"
         >
           Colabora
         </h3>
@@ -82,7 +82,7 @@
         class="licencia"
       >
         <h3 
-          class="display-1 mb-5 font-weight-medium"
+          class="display-1 mb-5 font-weight-regular"
         >
           Licencia
         </h3>
