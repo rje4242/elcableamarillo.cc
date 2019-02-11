@@ -45,8 +45,7 @@ export default {
           { title: 'Educación Secundaria', link: '/practicas/secundaria' },
           { title: 'Bachillerato', link: '/practicas/bachillerato' }
         ]
-      }
-      /*
+      },
       {
         title: 'Docentes',
         icon: 'group',

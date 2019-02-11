@@ -41,5 +41,12 @@ export default {
       'Practicas educativas realizadas por docentes para introducir la programación y la robótica en bachillerato.',
     keywords: 'prácticas, programación, robótica, arduino, bachillerato',
     image: ''
+  },
+  docentes: {
+    title: 'Docentes',
+    description:
+      'Listado de docentes que han contribuido en la realización de prácticas de programación y robótica.',
+    keywords: 'docentes, maestros, maestras, profesores, profesoras',
+    image: ''
   }
 }

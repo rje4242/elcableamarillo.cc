@@ -4,12 +4,14 @@
     grid-list-md
   >
     <Metas :seo="metas" />
+    <PageTitle 
+      :page="metas"
+    />
     <v-flex 
       xs12
     >
       <v-card>
         <v-card-title>
-          Docentes
           <v-spacer />
           <v-text-field
             v-model="search"
@@ -19,81 +21,126 @@
             hide-details
           />
         </v-card-title>
+
         <v-data-table
           :headers="headers"
           :items="teachers"
+          :expand="expand"
           :search="search"
+          hide-actions
           :pagination.sync="pagination"
+          item-key="name"
         >
           <template slot="items" slot-scope="props">
-            <td>{{ props.item.count }}</td>
-            <td>{{ props.item.name }}</td>
+            <tr @click="props.expanded = !props.expanded">
+              <td>
+                {{ props.item.count }}
+              </td>
+              <td>
+                {{ props.item.name }}
+              </td>
+            </tr>
+          </template>
+          <template slot="expand" slot-scope="props">
+            <v-card>
+              <v-card-text>
+                <v-list
+                  v-for="practica in projectsByTeacher(props.item.name)"
+                  :key="practica.slug"
+                  dense
+                >
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <v-list-tile-title>
+                        <router-link 
+                          :to="practica.link"
+                        >
+                          {{ practica.data.title }}
+                        </router-link>
+                      </v-list-tile-title>
+                      <v-spacer />
+                      <v-list-tile-sub-title>
+                        {{ practica.data.description }}
+                      </v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card-text>
+            </v-card>
+          </template>
+        </v-data-table>
+
+        <!--
+        <v-data-table
+          :headers="headers"
+          :items="teachers"
+          :expand="expand"
+          :search="search"
+          hide-actions
+          :pagination.sync="pagination"
+          item-key="name"
+        >
+          <template slot="items" slot-scope="props">
+            <tr @click="props.expanded = !props.expanded">
+              <td>
+                {{ props.item.count }}
+              </td>
+              <td>
+                {{ props.item.name }}
+              </td>
+            </tr>
+          </template>
+          <template slot="expand" slot-scope="props">
+            <v-card flat>
+              <v-card-text>Peek-a-boo!</v-card-text>
+            </v-card>
           </template>
           <v-alert slot="no-results" :value="true" color="error" icon="warning">
             No se han encontrado resultados para "{{ search }}".
           </v-alert>
         </v-data-table>
+        -->
       </v-card>
     </v-flex>
   </v-container>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
+import seo from '@/static/seo.js'
 import Metas from '@/components/Layout/Metas'
+import PageTitle from '@/components/Layout/PageTitle'
 
 export default {
   components: {
-    Metas
+    Metas,
+    PageTitle
+  },
+  asyncData({ params, store }) {
+    const data = {
+      metas: seo.docentes
+    }
+    return data
   },
   data() {
     return {
-      // Default metas => nuxt.config
-      metas: {
-        title: 'Docentes',
-        description:
-          'Maestros y profesores colaboradores del proyecto educativo El Cable Amarillo',
-        keywords: 'maestros, profesores, colabora, compartir, proyectos'
-        // image: ''
-      },
+      expand: false,
       search: '',
       headers: [
-        { text: 'Prácticas', value: 'count', sortable: false, width: 10 },
+        { text: 'Prácticas', value: 'count', sortable: false, width: 20 },
         { text: 'Nombre', value: 'name', sortable: false }
       ],
       pagination: {
         sortBy: 'count',
         descending: true,
-        rowsPerPage: 10
+        rowsPerPage: -1
       }
     }
-  },
-  async fetch({ store }) {
-    const params = {
-      name: 'all'
-    }
-    await store.dispatch('project/getProjects', params)
   },
   computed: {
-    ...mapState({
-      teachers: state => {
-        const teachers = []
-        state.project.list.map(project => {
-          return project.data.authors.map(author => {
-            const resultado = teachers.find((teacher, index) => {
-              if (teacher.name === author.name) {
-                teachers[index].count++
-              }
-              return teacher.name === author.name
-            })
-            if (resultado === undefined) {
-              author.count = 1
-              teachers.push(author)
-            }
-          })
-        })
-        return teachers
-      }
+    ...mapGetters({
+      teachers: ['project/teachers'],
+      projectsByTeacher: ['project/projectsByTeacher']
     })
   }
 }
