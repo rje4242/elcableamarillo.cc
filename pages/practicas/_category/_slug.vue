@@ -23,6 +23,9 @@
         <Tags 
           :tags="project.data.tags" 
         />
+        <Edit 
+          :data="project.rawProject" 
+        />
       </v-flex>
       <v-flex
         xs12
@@ -46,6 +49,7 @@ import Metas from '@/components/Layout/Metas'
 import Info from '@/components/Project/Info'
 import Authors from '@/components/Project/Authors'
 import Tags from '@/components/Project/Tags'
+import Edit from '@/components/Project/Edit'
 import Markdown from '@/components/Project/Markdown'
 
 export default {
@@ -54,6 +58,7 @@ export default {
     Info,
     Authors,
     Tags,
+    Edit,
     Markdown
   },
   async asyncData({ store, params }) {
@@ -67,8 +72,10 @@ export default {
 
     const path =
       'https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master'
+    const web = 'https://github.com/ElCableAmarillo/Practicas/blob/master'
     await axios.get(`${path}/${params.slug}/README.md`).then(res => {
       res = matter(res.data)
+      data.project.rawProject = `${web}/${params.slug}/README.md`
       data.project.content = res.content
       data.project.data = res.data
       data.project.data.url = `${path}/${params.slug}`
