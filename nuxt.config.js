@@ -57,7 +57,13 @@ module.exports = {
   },
   generate: {
     routes: async function() {
-      const h = ['/', '/404', '/practicas/primaria']
+      const h = [
+        '/',
+        '/404',
+        '/practicas/primaria',
+        '/practicas/secundaria',
+        '/practicas/bachillerato'
+      ]
       const p = await projects.primaria.map(p => {
         return '/practicas/primaria/' + p
       })
