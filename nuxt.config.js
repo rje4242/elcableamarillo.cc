@@ -20,7 +20,6 @@ const seo = {
 const github = {
   web: 'https://github.com/',
   raw: 'https://raw.githubusercontent.com',
-  avatar: 'https://avatars.githubusercontent.com',
   user: 'ElCableAmarillo',
   practicas: 'Practicas'
 }
@@ -38,8 +37,7 @@ module.exports = {
     },
     github: {
       web: `${github.web}/${github.user}/${github.practicas}`,
-      raw: `${github.raw}/${github.user}/${github.practicas}/master`,
-      avatar: `${github.avatar}`
+      raw: `${github.raw}/${github.user}/${github.practicas}/master`
     }
   },
   head: {
@@ -59,7 +57,14 @@ module.exports = {
   },
   generate: {
     routes: async function() {
-      const h = ['/', '/404']
+      const h = [
+        '/',
+        '/404',
+        '/practicas',
+        '/practicas/primaria',
+        '/practicas/secundaria',
+        '/practicas/bachillerato'
+      ]
       const p = await projects.primaria.map(p => {
         return '/practicas/primaria/' + p
       })
