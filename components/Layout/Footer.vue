@@ -12,7 +12,9 @@
       flat
       tile
     >
-      <v-card-title class="primary">
+      <v-card-title
+        class="font-weight-thin caption primary"
+      >
         <span>
           Esta obra está bajo una licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional.
         </span>
