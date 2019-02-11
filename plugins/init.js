@@ -1,4 +1,4 @@
-import projects from '~/static/projects.js'
+import projects from '@/static/projects.js'
 
 export default function({ store }) {
   store.dispatch('project/getProjects', {

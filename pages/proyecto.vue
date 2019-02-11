@@ -3,7 +3,9 @@
     fluid
     grid-list-md
   >
-    <Metas :seo="metas" />
+    <Metas
+      :seo="metas" 
+    />
     <v-flex
       xs12
       sm12
@@ -140,20 +142,20 @@
 </template>
 
 <script>
+import seo from '@/static/seo.js'
 import Metas from '@/components/Layout/Metas'
 
 export default {
   components: {
     Metas
   },
+  asyncData({ params, store }) {
+    const data = {
+      metas: seo.proyecto
+    }
+    return data
+  },
   data: () => ({
-    // Default metas => nuxt.config
-    metas: {
-      title: 'Proyecto Educativo, El Cable Amarillo',
-      // description: '',
-      keywords: 'proyecto, open source, software libre, hardware libre'
-      // image: ''
-    },
     editions: [
       {
         year: '2019',

@@ -5,30 +5,32 @@
 </template>
 
 <script>
+import seo from '@/static/seo.js'
+
 export default {
   name: 'Metas',
   props: {
     seo: {
       type: Object,
       default: () => ({
-        title: process.env.seo.title,
-        description: process.env.seo.description,
-        keywords: process.env.seo.keywords,
-        image: process.env.seo.image
+        title: seo.default.title,
+        description: seo.default.description,
+        keywords: seo.default.keywords,
+        image: seo.default.image
       })
     }
   },
   head() {
-    const title = this.seo.title || process.env.seo.title
-    const description = this.seo.description || process.env.seo.description
-    const tags = this.seo.keywords || process.env.seo.keywords
-    const image = this.seo.image || process.env.seo.image
+    const title = this.seo.title || seo.default.title
+    const description = this.seo.description || seo.default.description
+    const keywords = this.seo.keywords || seo.default.keywords
+    const image = this.seo.image || seo.default.image
     const url = this.seo.path || this.$route.path
     return {
       title: title,
       meta: [
         { name: 'description', content: description },
-        { name: 'keywords', content: tags },
+        { name: 'keywords', content: keywords },
         { property: 'og:title', content: title },
         { property: 'og:description', content: description },
         { property: 'og:image', content: image },

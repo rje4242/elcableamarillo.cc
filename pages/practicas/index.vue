@@ -8,22 +8,18 @@
 </template>
 
 <script>
+import seo from '@/static/seo.js'
 import Metas from '@/components/Layout/Metas'
 
 export default {
   components: {
     Metas
   },
-  data() {
-    return {
-      // Default metas => nuxt.config
-      metas: {
-        title: 'Prácticas'
-        // description: ''
-        // keywords: 'maestros, profesores, colabora, compartir, proyectos'
-        // image: ''
-      }
+  asyncData({ params, store }) {
+    const data = {
+      metas: seo.practicas
     }
+    return data
   }
 }
 </script>

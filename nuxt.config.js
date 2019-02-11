@@ -9,27 +9,9 @@ const routerBase = {
   }
 }
 
-const seo = {
-  title: 'El Cable Amarillo',
-  description:
-    'Proyecto educativo de código abierto para fomentar el uso de la programación y robótica en los centros educativos utilizando herramientas de software y hardware libre',
-  keywords:
-    'programación, robótica, arduino, educación, primaria, secundaria, murcia',
-  image: '/default.png'
-}
-
 module.exports = {
   mode: 'universal',
   ...routerBase,
-  env: {
-    projects: projects,
-    seo: {
-      title: seo.title,
-      description: seo.description,
-      keywords: seo.keywords,
-      image: seo.image
-    }
-  },
   head: {
     meta: [
       { charset: 'utf-8' },

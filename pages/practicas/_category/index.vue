@@ -35,6 +35,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import seo from '@/static/seo.js'
 import Metas from '@/components/Layout/Metas'
 import Project from '@/components/Project'
 
@@ -46,14 +47,9 @@ export default {
   asyncData({ params, store }) {
     const category = params.category
     const data = {
-      metas: {},
+      metas: seo[category],
       category: category
     }
-
-    data.metas.title = `Prácticas ${category}`
-    data.metas.description = `Prácticas de programación y robótica para educación ${category}`
-    data.metas.keywords = `prácticas, programación, robótica, educación, ${category}`
-    // data.metas.image =
     return data
   },
   computed: {
