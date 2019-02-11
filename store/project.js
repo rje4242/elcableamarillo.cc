@@ -2,7 +2,6 @@ import axios from 'axios'
 import * as matter from 'gray-matter'
 
 export const state = () => ({
-  item: {},
   category: '',
   list: []
 })
@@ -10,9 +9,6 @@ export const state = () => ({
 export const mutations = {
   INIT: state => {
     state.list = []
-  },
-  SET_ITEM: (state, project) => {
-    state.item = project
   },
   SET_CATEGORY: (state, name) => {
     state.category = name
@@ -23,25 +19,6 @@ export const mutations = {
 }
 
 export const actions = {
-  async getItem({ commit }, params) {
-    commit('INIT')
-    commit('SET_CATEGORY', params.category)
-    const slug = params.slug
-    await axios
-      .get(`${process.env.github.raw}/${slug}/README.md`)
-      .then(res => {
-        const project = matter(res.data)
-        project.data.category = params.category
-        project.data.url = `${process.env.github.raw}/${slug}`
-        project.data.image = `${process.env.github.raw}/${slug}/practica.gif`
-        project.data.slug = slug
-        commit('SET_ITEM', project)
-      })
-      .catch(error => {
-        error = `${error.response.status}: ${error.response.config.url}`
-        // console.log(error)
-      })
-  },
   async getProjects({ commit }, params) {
     commit('INIT')
     commit('SET_CATEGORY', params.category)

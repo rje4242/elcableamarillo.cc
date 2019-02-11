@@ -39,7 +39,9 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import axios from 'axios'
+import * as matter from 'gray-matter'
+
 import Metas from '@/components/Layout/Metas'
 import Info from '@/components/Project/Info'
 import Authors from '@/components/Project/Authors'
@@ -55,34 +57,32 @@ export default {
     Markdown
   },
   async asyncData({ store, params }) {
-    console.log(params)
-    await store.dispatch('project/getItem', params)
-    const data = store.state.project.item.data
-    const title = data.title
-    const description = data.description
-    const keywords = data.tags
-    const image = data.image
-    return {
-      // Default metas => nuxt.config
-      metas: {
-        title: title,
-        description: description,
-        keywords: keywords,
-        image: image
+    const data = {
+      metas: {},
+      project: {
+        data: null,
+        content: ''
       }
     }
-  },
-  /*
-  async fetch({ store, params }) {
-    await store.dispatch('project/getItem', params)
-  },
-  */
-  computed: {
-    ...mapState({
-      project: state => {
-        return state.project.item
-      }
+
+    const path =
+      'https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master'
+    await axios.get(`${path}/${params.slug}/README.md`).then(res => {
+      res = matter(res.data)
+      data.project.content = res.content
+      data.project.data = res.data
+      data.project.data.url = `${path}/${params.slug}`
+      data.project.data.image = `${path}/${params.slug}/practica.gif`
+      data.project.data.category = params.category
+      data.project.data.slug = params.slug
     })
+
+    data.metas.title = data.project.data.title
+    data.metas.description = data.project.data.description
+    data.metas.keywords = data.project.data.tags
+    data.metas.image = data.project.data.image
+
+    return data
   }
 }
 </script>
