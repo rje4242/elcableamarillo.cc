@@ -55,6 +55,7 @@ export default {
     Markdown
   },
   async asyncData({ store, params }) {
+    console.log(params)
     await store.dispatch('project/getItem', params)
     const data = store.state.project.item.data
     const title = data.title
