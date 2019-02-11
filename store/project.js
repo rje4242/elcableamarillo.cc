@@ -2,6 +2,12 @@ import axios from 'axios'
 import * as matter from 'gray-matter'
 
 export const state = () => ({
+  raw: 'https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/',
+  project: {
+    rawProject: '',
+    data: {},
+    content: ''
+  },
   list: []
 })
 
@@ -18,40 +24,23 @@ export const getters = {
 }
 
 export const actions = {
-  async getProjects({ commit }, params) {
-    const primaria = process.env.projects.primaria
-    const secundaria = process.env.projects.secundaria
-    const bachillerato = process.env.projects.bachillerato
-    let projects = []
-    switch (params.category) {
-      case 'primaria':
-        projects = primaria
-        break
-      case 'secundaria':
-        projects = secundaria
-        break
-      case 'bachillerato':
-        projects = bachillerato
-        break
-      default:
-        projects = primaria.concat(secundaria).concat(bachillerato)
-    }
-
-    const promises = await projects.map(async slug => {
-      await axios
-        .get(`${process.env.github.raw}/${slug}/README.md`)
-        .then(res => {
-          const project = matter(res.data)
-          project.data.category = params.category
-          project.data.url = `${process.env.github.raw}/${slug}`
-          project.data.image = `${process.env.github.raw}/${slug}/practica.gif`
-          project.data.slug = slug
-          commit('ADD_PROJECT', project)
-        })
-        .catch(error => {
-          error = `${error.response.status}: ${error.response.config.url}`
-          // console.log(error)
-        })
+  async getProjects({ commit, state }, params) {
+    const promises = await params.projects.map(async slug => {
+      const rawProject = `${state.raw}/${slug}`
+      await axios.get(`${rawProject}/README.md`).then(res => {
+        const project = matter(res.data)
+        project.rawProject = rawProject
+        project.data.category = params.category
+        project.data.slug = slug
+        project.data.image = `${rawProject}/practica.gif`
+        commit('ADD_PROJECT', project)
+      })
+      /*
+      .catch(error => {
+        error = `${error.response.status}: ${error.response.config.url}`
+        // console.log(error)
+      })
+      */
     })
     await Promise.all(promises)
   }

@@ -17,12 +17,6 @@ const seo = {
     'programación, robótica, arduino, educación, primaria, secundaria, murcia',
   image: '/default.png'
 }
-const github = {
-  web: 'https://github.com/',
-  raw: 'https://raw.githubusercontent.com',
-  user: 'ElCableAmarillo',
-  practicas: 'Practicas'
-}
 
 module.exports = {
   mode: 'universal',
@@ -34,10 +28,6 @@ module.exports = {
       description: seo.description,
       keywords: seo.keywords,
       image: seo.image
-    },
-    github: {
-      web: `${github.web}/${github.user}/${github.practicas}`,
-      raw: `${github.raw}/${github.user}/${github.practicas}/master`
     }
   },
   head: {
