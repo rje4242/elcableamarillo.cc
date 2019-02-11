@@ -20,6 +20,9 @@ export const mutations = {
 export const getters = {
   projectsByCategory: state => category => {
     return state.list.filter(project => project.data.category === category)
+  },
+  projectBySlug: state => slug => {
+    return state.list.find(project => project.data.slug === slug)
   }
 }
 
