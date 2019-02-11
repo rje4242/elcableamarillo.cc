@@ -2,26 +2,23 @@ import axios from 'axios'
 import * as matter from 'gray-matter'
 
 export const state = () => ({
-  category: '',
   list: []
 })
 
 export const mutations = {
-  INIT: state => {
-    state.list = []
-  },
-  SET_CATEGORY: (state, name) => {
-    state.category = name
-  },
   ADD_PROJECT: (state, project) => {
     state.list.push(project)
   }
 }
 
+export const getters = {
+  projectsByCategory: state => category => {
+    return state.list.filter(project => project.data.category === category)
+  }
+}
+
 export const actions = {
   async getProjects({ commit }, params) {
-    commit('INIT')
-    commit('SET_CATEGORY', params.category)
     const primaria = process.env.projects.primaria
     const secundaria = process.env.projects.secundaria
     const bachillerato = process.env.projects.bachillerato

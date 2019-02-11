@@ -73,7 +73,7 @@ module.exports = {
     }
   },
   modules: ['@nuxtjs/axios'],
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: ['~/plugins/vuetify.js', '~/plugins/init.js'],
   css: ['~/assets/style/app.styl'],
   loading: {
     color: '#ffee00',

@@ -19,7 +19,7 @@
       wrap
     >
       <v-flex
-        v-for="project in projects"
+        v-for="project in projectsByCategory(category)"
         :key="project.data.slug"
         xs12
         sm6
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 import Metas from '@/components/Layout/Metas'
 import Project from '@/components/Project'
 
@@ -43,29 +43,22 @@ export default {
     Metas,
     Project
   },
-  asyncData({ params }) {
+  asyncData({ params, store }) {
     const category = params.category
-    return {
-      // Default metas => nuxt.config
-      metas: {
-        title: `Prácticas ${category}`,
-        description: `Prácticas de programación y robótica para educación ${category}`,
-        keywords: `prácticas, programación, robótica, educación, ${category}`
-        // image: ''
-      }
+    const data = {
+      metas: {},
+      category: category
     }
-  },
-  async fetch({ store, params }) {
-    await store.dispatch('project/getProjects', params)
+
+    data.metas.title = `Prácticas ${category}`
+    data.metas.description = `Prácticas de programación y robótica para educación ${category}`
+    data.metas.keywords = `prácticas, programación, robótica, educación, ${category}`
+    // data.metas.image =
+    return data
   },
   computed: {
-    ...mapState({
-      category: state => {
-        return state.project.category
-      },
-      projects: state => {
-        return state.project.list
-      }
+    ...mapGetters({
+      projectsByCategory: ['project/projectsByCategory']
     })
   }
 }
