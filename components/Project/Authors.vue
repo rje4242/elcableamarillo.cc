@@ -40,7 +40,7 @@ export default {
     },
     avatar(author) {
       const username = author.github ? author.github : 'ElCableAmarillo'
-      return `${process.env.github.avatar}/${username}`
+      return `https://avatars.githubusercontent.com/${username}`
     }
   }
 }
