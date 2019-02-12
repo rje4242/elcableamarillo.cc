@@ -3,6 +3,7 @@ import projects from './static/projects.js'
 const nodeExternals = require('webpack-node-externals')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
+const canonical = 'http://www.elcableamarillo.cc'
 const routerBase = {
   router: {
     base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/' : '/'
@@ -12,6 +13,9 @@ const routerBase = {
 module.exports = {
   mode: 'universal',
   ...routerBase,
+  env: {
+    canonical: canonical
+  },
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -19,7 +23,8 @@ module.exports = {
       { name: 'robots', content: 'index, follow' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'canonical', href: canonical },
+      { rel: 'icon', type: 'image/x-icon', href: `${canonical}/favicon.ico` },
       {
         rel: 'stylesheet',
         href:
