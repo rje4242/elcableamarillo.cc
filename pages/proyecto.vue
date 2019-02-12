@@ -88,12 +88,12 @@
         </h3>
         <v-list>
           <v-list-tile>
-            <v-list-tile-title class="subheading">
+            <v-list-tile-title class="title font-weight-medium">
               Esta obra está bajo una licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional.
             </v-list-tile-title>
           </v-list-tile>
           <v-list-tile class="mt-3">
-            <v-list-tile-title class="title font-weight-bold">
+            <v-list-tile-title class="title font-weight-medium">
               Usted es libre:
             </v-list-tile-title>
           </v-list-tile>
@@ -115,7 +115,7 @@
           </v-list-tile>
 
           <v-list-tile class="mt-3">
-            <v-list-tile-title class="title font-weight-bold">
+            <v-list-tile-title class="title font-weight-medium">
               Bajo las siguientes condiciones:
             </v-list-tile-title>
           </v-list-tile>
@@ -129,7 +129,7 @@
           </v-list-tile>
           <v-list-tile>
             <v-list-tile-action>
-              <v-icon>device_hub</v-icon>
+              <v-icon>loop</v-icon>
             </v-list-tile-action>
             <v-list-tile-content class="font-weight-light">
               Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
