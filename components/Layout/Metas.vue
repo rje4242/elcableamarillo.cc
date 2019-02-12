@@ -25,7 +25,7 @@ export default {
     const title = this.seo.title || seo.default.title
     const description = this.seo.description || seo.default.description
     const keywords = this.seo.keywords || seo.default.keywords
-    const image = canonical + (this.seo.image || seo.default.image)
+    const image = this.seo.image || canonical + seo.default.image
     const url = canonical + (this.seo.path || this.$route.path)
     return {
       title: title,
