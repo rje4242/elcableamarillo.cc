@@ -23,7 +23,6 @@ module.exports = {
       { name: 'robots', content: 'index, follow' }
     ],
     link: [
-      { rel: 'canonical', href: canonical },
       { rel: 'icon', type: 'image/x-icon', href: `${canonical}/favicon.ico` },
       {
         rel: 'stylesheet',
