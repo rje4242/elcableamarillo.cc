@@ -29,7 +29,7 @@ export default {
   async asyncData({ store, params }) {
     await store.dispatch('training/setTraining', params)
 
-    const training = store.state.training.training
+    const training = store.state.training.item
 
     return {
       training: training,

@@ -4,7 +4,7 @@ import * as matter from 'gray-matter'
 
 export const state = () => ({
   raw: 'https://raw.githubusercontent.com/ElCableAmarillo/Formacion/master',
-  training: {
+  item: {
     slug: '',
     link: '',
     rawLink: '',
@@ -17,11 +17,11 @@ export const state = () => ({
 
 export const mutations = {
   INIT: state => {
-    state.training = {}
+    state.item = {}
     state.list = []
   },
   SET_TRAINING: (state, training) => {
-    state.training = training
+    state.item = training
   },
   ADD_TRAINING: (state, training) => {
     state.list.push(training)
