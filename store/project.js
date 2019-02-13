@@ -2,19 +2,26 @@ import axios from 'axios'
 import * as matter from 'gray-matter'
 
 export const state = () => ({
-  /** 
-  project: {
+  raw: 'https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master',
+  item: {
+    slug: '',
     link: '',
-    rawProject: '',
+    rawLink: '',
+    image: '',
     data: {},
     content: ''
   },
-  */
-  raw: 'https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/',
   list: []
 })
 
 export const mutations = {
+  INIT: state => {
+    state.item = {}
+    state.list = []
+  },
+  SET_PROJECT: (state, project) => {
+    state.item = project
+  },
   ADD_PROJECT: (state, project) => {
     state.list.push(project)
   }
@@ -62,6 +69,25 @@ export const getters = {
 }
 
 export const actions = {
+  async setProject({ commit, state }, params) {
+    commit('INIT')
+    const project = {}
+    project.slug = params.slug
+    project.link = `/practicas/${params.category}/${params.slug}`
+    project.rawLink = `${state.raw}/${params.slug}`
+    project.image = `${state.raw}/${params.slug}/practica.gif`
+
+    await axios.get(`${project.rawLink}/README.md`).then(res => {
+      const doc = matter(res.data)
+      project.data = doc.data
+      project.data.category = params.category
+      project.content = doc.content
+        .split('![](')
+        .join('![' + doc.data.title + '](' + project.rawLink + '/')
+
+      commit('SET_PROJECT', project)
+    })
+  },
   async getProjects({ commit, state }, params) {
     const promises = await params.projects.map(async slug => {
       const rawProject = `${state.raw}/${slug}`

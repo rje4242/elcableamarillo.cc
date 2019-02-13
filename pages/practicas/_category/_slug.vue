@@ -3,7 +3,9 @@
     fluid 
     grid-list-md
   >
-    <Metas :seo="metas" />
+    <Metas
+      :seo="metas"
+    />
     <v-layout
       row 
       wrap
@@ -34,7 +36,7 @@
         order-md3
       >
         <Markdown 
-          :project="project" 
+          :content="project.content" 
         />
       </v-flex>
     </v-layout>
@@ -42,15 +44,12 @@
 </template>
 
 <script>
-import axios from 'axios'
-import * as matter from 'gray-matter'
-
 import Metas from '@/components/Layout/Metas'
 import Info from '@/components/Project/Info'
 import Authors from '@/components/Project/Authors'
 import Tags from '@/components/Project/Tags'
 import Edit from '@/components/Project/Edit'
-import Markdown from '@/components/Project/Markdown'
+import Markdown from '@/components/Markdown'
 
 export default {
   components: {
@@ -61,6 +60,22 @@ export default {
     Edit,
     Markdown
   },
+  async asyncData({ store, params }) {
+    await store.dispatch('project/setProject', params)
+
+    const project = store.state.project.item
+
+    return {
+      project: project,
+      metas: {
+        title: project.data.title,
+        description: project.data.description,
+        keywords: project.data.tags,
+        image: project.image
+      }
+    }
+  }
+  /*
   async asyncData({ store, params }) {
     const data = {
       metas: {},
@@ -91,6 +106,7 @@ export default {
 
     return data
   }
+  */
 }
 </script>
 
