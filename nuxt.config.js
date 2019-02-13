@@ -1,3 +1,4 @@
+import trainings from './static/trainings.js'
 import projects from './static/projects.js'
 
 const nodeExternals = require('webpack-node-externals')
@@ -40,6 +41,9 @@ module.exports = {
         '/practicas/secundaria',
         '/practicas/bachillerato'
       ]
+      const t = await trainings.list.map(t => {
+        return '/formacion/' + t
+      })
       const p = await projects.primaria.map(p => {
         return '/practicas/primaria/' + p
       })
@@ -49,8 +53,14 @@ module.exports = {
       const b = await projects.bachillerato.map(p => {
         return '/practicas/bachillerato/' + p
       })
-      return Promise.all([h, p, s, b]).then(values => {
-        return [...values[0], ...values[1], ...values[2], ...values[3]]
+      return Promise.all([t, h, p, s, b]).then(values => {
+        return [
+          ...values[0],
+          ...values[1],
+          ...values[2],
+          ...values[3],
+          ...values[4]
+        ]
       })
     }
   },
