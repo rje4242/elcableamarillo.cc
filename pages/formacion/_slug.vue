@@ -3,7 +3,9 @@
     fluid 
     grid-list-md
   >
-    <Metas :seo="metas" />
+    <Metas
+      :seo="metas"
+    />
     <PageTitle 
       :page="metas"
     />
