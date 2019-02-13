@@ -14,6 +14,13 @@ export default {
     keywords: 'proyecto, open source, software libre, hardware libre',
     image: ''
   },
+  formacion: {
+    title: 'Formación',
+    description:
+      'Recursos para la formación de programación y robótica sobre los materiales del programa educativo El Cable Amarillo',
+    keywords: 'formación, programación, robótica',
+    image: ''
+  },
   practicas: {
     title: 'Prácticas',
     description:
