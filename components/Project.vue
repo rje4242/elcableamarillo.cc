@@ -9,7 +9,7 @@
         :to="project.link"
       >
         <v-img
-          :src="project.data.image"
+          :src="project.image"
           lazy-src="~/static/loading.png"
           aspect-ratio="1.75"
         />
@@ -38,7 +38,7 @@ export default {
   props: {
     project: {
       type: Object,
-      default: null
+      default: () => {}
     }
   }
 }

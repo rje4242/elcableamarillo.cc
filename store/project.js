@@ -1,3 +1,4 @@
+import projects from '@/static/projects.js'
 import axios from 'axios'
 import * as matter from 'gray-matter'
 
@@ -88,24 +89,21 @@ export const actions = {
       commit('SET_PROJECT', project)
     })
   },
-  async getProjects({ commit, state }, params) {
-    const promises = await params.projects.map(async slug => {
-      const rawProject = `${state.raw}/${slug}`
-      await axios.get(`${rawProject}/README.md`).then(res => {
-        const project = matter(res.data)
-        project.link = `/practicas/${params.category}/${slug}`
-        project.rawProject = rawProject
-        project.data.category = params.category
-        project.data.slug = slug
-        project.data.image = `${rawProject}/practica.gif`
+  async setProjects({ commit, state }, params) {
+    commit('INIT')
+    const promises = await projects[params.category].map(async slug => {
+      const project = {}
+      project.slug = slug
+      project.link = `/practicas/${params.category}/${slug}`
+      project.rawLink = `${state.raw}/${slug}`
+      project.image = `${state.raw}/${slug}/practica.gif`
+
+      await axios.get(`${project.rawLink}/README.md`).then(res => {
+        const doc = matter(res.data)
+        project.data = doc.data
+        project.content = doc.content
         commit('ADD_PROJECT', project)
       })
-      /*
-      .catch(error => {
-        error = `${error.response.status}: ${error.response.config.url}`
-        // console.log(error)
-      })
-      */
     })
     await Promise.all(promises)
   }

@@ -41,7 +41,7 @@ export default {
     PageTitle,
     Training
   },
-  asyncData({ params, store }) {
+  asyncData() {
     const data = {
       metas: seo.formacion
     }

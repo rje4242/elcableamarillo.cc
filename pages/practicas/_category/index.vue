@@ -14,8 +14,8 @@
       wrap
     >
       <v-flex
-        v-for="project in projectsByCategory(category)"
-        :key="project.data.slug"
+        v-for="project in projects"
+        :key="project.slug"
         xs12
         sm6
         md4
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 import seo from '@/static/seo.js'
 import Metas from '@/components/Layout/Metas'
 import PageTitle from '@/components/Layout/PageTitle'
@@ -41,17 +41,20 @@ export default {
     PageTitle,
     Project
   },
-  asyncData({ params, store }) {
-    const category = params.category
+  asyncData({ params }) {
     const data = {
-      metas: seo[category],
-      category: category
+      metas: seo[params.category]
     }
     return data
   },
+  async fetch({ store, params }) {
+    await store.dispatch('project/setProjects', params)
+  },
   computed: {
-    ...mapGetters({
-      projectsByCategory: ['project/projectsByCategory']
+    ...mapState({
+      projects: state => {
+        return state.project.list
+      }
     })
   }
 }
