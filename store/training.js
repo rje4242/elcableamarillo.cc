@@ -41,6 +41,9 @@ export const actions = {
       const doc = matter(res.data)
       training.data = doc.data
       training.content = doc.content
+        .split('![](')
+        .join('![' + doc.data.title + '](' + training.rawLink + '/')
+
       commit('SET_TRAINING', training)
     })
   },

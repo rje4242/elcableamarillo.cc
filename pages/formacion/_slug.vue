@@ -10,7 +10,7 @@
       :page="metas"
     />
     <Markdown 
-      :training="training" 
+      :content="training.content" 
     />
   </v-container>
 </template>
@@ -18,7 +18,7 @@
 <script>
 import Metas from '@/components/Layout/Metas'
 import PageTitle from '@/components/Layout/PageTitle'
-import Markdown from '@/components/Training/Markdown'
+import Markdown from '@/components/Markdown'
 
 export default {
   components: {

@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <vue-markdown 
-      class="content"
-      :anchor-attributes="anchorAttrs"
-    >
-      {{ training.content }}
-    </vue-markdown>
-  </div>
+  <vue-markdown
+    :anchor-attributes="anchorAttrs"
+    class="content"
+  >
+    {{ content }}
+  </vue-markdown>
 </template>
 
 <script>
 import VueMarkdown from 'vue-markdown'
-// import hljs from 'highlight.js/lib/highlight'
-// import cpp from 'highlight.js/lib/languages/cpp'
+import hljs from 'highlight.js/lib/highlight'
+import cpp from 'highlight.js/lib/languages/cpp'
 
 export default {
   name: 'Markdown',
@@ -20,9 +18,9 @@ export default {
     VueMarkdown
   },
   props: {
-    training: {
-      type: Object,
-      default: () => {}
+    content: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -32,31 +30,20 @@ export default {
         rel: 'noopener noreferrer nofollow'
       }
     }
-  }
-  /*
+  },
   mounted() {
     const targets = document.querySelectorAll('code')
     targets.forEach(target => {
-      hljs.registerLanguage('bash', cpp)
+      hljs.registerLanguage('arduino', cpp)
       hljs.highlightBlock(target)
     })
-  },
-  methods: {
-    content() {
-      const data = this.training.data
-      const content = this.training.content
-      return content
-        .split('![](')
-        .join('![' + data.title + '](' + data.url + '/')
-    }
   }
-  */
 }
 </script>
 
 <style lang="scss" scope>
-@import 'highlight.js/styles/default.css';
-// @import 'highlight.js/styles/androidstudio.css';
+// @import 'highlight.js/styles/default.css';
+@import 'highlight.js/styles/androidstudio.css';
 
 .content {
   font-size: 18px;
