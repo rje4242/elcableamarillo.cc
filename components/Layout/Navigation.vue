@@ -36,13 +36,11 @@ export default {
         icon: 'dashboard',
         link: '/proyecto'
       },
-      /*
       {
         title: 'Formación',
         icon: 'school',
         link: '/formacion'
       },
-      */
       {
         title: 'Prácticas',
         icon: 'folder',

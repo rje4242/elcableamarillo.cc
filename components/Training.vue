@@ -5,17 +5,15 @@
       :class="`elevation-${hover ? 12 : 2}`"
       class="card"
     >
-      <!--
       <router-link 
-        :to="project.link"
+        :to="training.link"
       >
         <v-img
-          :src="project.data.image"
+          :src="training.image"
           lazy-src="~/static/loading.png"
           aspect-ratio="1.75"
         />
       </router-link>
-      -->
       <v-card-title 
         primary-title
       >

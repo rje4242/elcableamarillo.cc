@@ -4,11 +4,9 @@
     grid-list-md
   >
     <Metas :seo="metas" />
-    <!--
     <PageTitle 
       :page="metas"
     />
-    -->
     <Markdown 
       :training="training" 
     />
@@ -17,13 +15,13 @@
 
 <script>
 import Metas from '@/components/Layout/Metas'
-// import PageTitle from '@/components/Layout/PageTitle'
+import PageTitle from '@/components/Layout/PageTitle'
 import Markdown from '@/components/Training/Markdown'
 
 export default {
   components: {
     Metas,
-    // PageTitle,
+    PageTitle,
     Markdown
   },
   async asyncData({ store, params }) {

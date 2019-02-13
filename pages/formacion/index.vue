@@ -15,7 +15,7 @@
     >
       <v-flex
         v-for="training in trainings"
-        :key="training.data.slug"
+        :key="training.slug"
         xs12
         sm6
         md4
