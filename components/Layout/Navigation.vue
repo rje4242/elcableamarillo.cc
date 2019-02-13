@@ -50,17 +50,12 @@ export default {
           { title: 'Educación Secundaria', link: '/practicas/secundaria' },
           { title: 'Bachillerato', link: '/practicas/bachillerato' }
         ]
-      },
+      }
+      /*,
       {
         title: 'Docentes',
         icon: 'group',
         link: '/docentes'
-      }
-      /*
-      { 
-        title: 'Blog',
-        icon: 'local_library',
-        link: '/blog'
       }
       */
     ]
