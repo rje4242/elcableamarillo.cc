@@ -75,38 +75,6 @@ export default {
       }
     }
   }
-  /*
-  async asyncData({ store, params }) {
-    const data = {
-      metas: {},
-      project: {
-        data: null,
-        content: ''
-      }
-    }
-
-    const path =
-      'https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master'
-    const web = 'https://github.com/ElCableAmarillo/Practicas/blob/master'
-    await axios.get(`${path}/${params.slug}/README.md`).then(res => {
-      res = matter(res.data)
-      data.project.rawProject = `${web}/${params.slug}/README.md`
-      data.project.content = res.content
-      data.project.data = res.data
-      data.project.data.url = `${path}/${params.slug}`
-      data.project.data.image = `${path}/${params.slug}/practica.gif`
-      data.project.data.category = params.category
-      data.project.data.slug = params.slug
-    })
-
-    data.metas.title = data.project.data.title
-    data.metas.description = data.project.data.description
-    data.metas.keywords = data.project.data.tags
-    data.metas.image = data.project.data.image
-
-    return data
-  }
-  */
 }
 </script>
 
