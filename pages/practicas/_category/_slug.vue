@@ -26,7 +26,7 @@
           :tags="project.data.tags" 
         />
         <Edit 
-          :data="project.rawProject" 
+          :editLink="project.editLink" 
         />
       </v-flex>
       <v-flex

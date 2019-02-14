@@ -7,7 +7,7 @@
       <br>
       <a
         target="_blank"
-        :href="data"
+        :href="editLink"
         class="white--text"
       >
         Edita esta página en GitHub
@@ -20,7 +20,7 @@
 export default {
   name: 'Edit',
   props: {
-    data: {
+    editLink: {
       type: String,
       default: ''
     }

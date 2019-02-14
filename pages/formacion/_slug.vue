@@ -6,9 +6,6 @@
     <Metas
       :seo="metas"
     />
-    <PageTitle 
-      :page="metas"
-    />
     <Markdown 
       :content="training.content" 
     />
@@ -17,13 +14,11 @@
 
 <script>
 import Metas from '@/components/Layout/Metas'
-import PageTitle from '@/components/Layout/PageTitle'
 import Markdown from '@/components/Markdown'
 
 export default {
   components: {
     Metas,
-    PageTitle,
     Markdown
   },
   async asyncData({ store, params }) {

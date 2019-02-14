@@ -4,10 +4,12 @@ import * as matter from 'gray-matter'
 
 export const state = () => ({
   raw: 'https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master',
+  edit: 'https://github.com/ElCableAmarillo/Practicas/blob/master',
   item: {
     slug: '',
     link: '',
     rawLink: '',
+    editLink: '',
     image: '',
     data: {},
     content: ''
@@ -28,15 +30,10 @@ export const mutations = {
   }
 }
 
+/*
 export const getters = {
-  projectsByLevel: state => level => {
-    return state.list.filter(project => project.data.level === level)
-  },
   projectsByCategory: state => category => {
     return state.list.filter(project => project.data.category === category)
-  },
-  projectBySlug: state => slug => {
-    return state.list.find(project => project.data.slug === slug)
   },
   projectsByTeacher: state => teacher => {
     const projects = []
@@ -68,6 +65,7 @@ export const getters = {
     return teachers
   }
 }
+*/
 
 export const actions = {
   async setProject({ commit, state }, params) {
@@ -76,6 +74,7 @@ export const actions = {
     project.slug = params.slug
     project.link = `/practicas/${params.category}/${params.slug}`
     project.rawLink = `${state.raw}/${params.slug}`
+    project.editLink = `${state.edit}/${params.slug}/README.md`
     project.image = `${state.raw}/${params.slug}/practica.gif`
 
     await axios.get(`${project.rawLink}/README.md`).then(res => {
@@ -96,6 +95,7 @@ export const actions = {
       project.slug = slug
       project.link = `/practicas/${params.category}/${slug}`
       project.rawLink = `${state.raw}/${slug}`
+      project.editLink = `${state.edit}/${slug}/README.md`
       project.image = `${state.raw}/${slug}/practica.gif`
 
       await axios.get(`${project.rawLink}/README.md`).then(res => {
