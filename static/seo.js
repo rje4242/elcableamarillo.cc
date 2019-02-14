@@ -5,7 +5,7 @@ export default {
       'Proyecto educativo de código abierto para fomentar el uso de la programación y robótica en los centros educativos utilizando herramientas de software y hardware libre',
     keywords:
       'programación, robótica, arduino, educación, primaria, secundaria, murcia',
-    image: '/default.png'
+    image: 'http://www.elcableamarillo.cc/default.png'
   },
   proyecto: {
     title: 'Proyecto Educativo - El Cable Amarillo',
