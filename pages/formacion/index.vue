@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import seo from '@/static/seo.js'
 import Metas from '@/components/Layout/Metas'
 import PageTitle from '@/components/Layout/PageTitle'
@@ -41,21 +40,15 @@ export default {
     PageTitle,
     Training
   },
-  asyncData() {
-    const data = {
+  async asyncData({ store, params }) {
+    await store.dispatch('training/setTrainings')
+
+    const trainings = store.state.training.list
+
+    return {
+      trainings: trainings,
       metas: seo.formacion
     }
-    return data
-  },
-  async fetch({ store }) {
-    await store.dispatch('training/setTrainings')
-  },
-  computed: {
-    ...mapState({
-      trainings: state => {
-        return state.training.list
-      }
-    })
   }
 }
 </script>

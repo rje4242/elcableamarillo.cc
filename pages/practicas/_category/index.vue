@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import seo from '@/static/seo.js'
 import Metas from '@/components/Layout/Metas'
 import PageTitle from '@/components/Layout/PageTitle'
@@ -41,21 +40,15 @@ export default {
     PageTitle,
     Project
   },
-  asyncData({ params }) {
-    const data = {
+  async asyncData({ store, params }) {
+    await store.dispatch('project/setProjects', params)
+
+    const projects = store.state.project.list
+
+    return {
+      projects: projects,
       metas: seo[params.category]
     }
-    return data
-  },
-  async fetch({ store, params }) {
-    await store.dispatch('project/setProjects', params)
-  },
-  computed: {
-    ...mapState({
-      projects: state => {
-        return state.project.list
-      }
-    })
   }
 }
 </script>
