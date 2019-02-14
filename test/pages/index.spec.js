@@ -5,7 +5,6 @@ import Vuetify from 'vuetify'
 
 Vue.use(Vuetify)
 
-
 describe('Index', () => {
   test('mounts properly', () => {
     const wrapper = shallowMount(Index)
