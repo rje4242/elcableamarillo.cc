@@ -1,7 +1,7 @@
 <template>
   <vue-markdown
     :anchor-attributes="anchorAttrs"
-    class="content"
+    class="content headline font-weight-light"
   >
     {{ content }}
   </vue-markdown>
@@ -46,14 +46,16 @@ export default {
 @import 'highlight.js/styles/androidstudio.css';
 
 .content {
-  font-size: 18px;
+  margin-bottom: 50px;
   h1 {
-    margin: 0 0 20px;
+    margin: 20px 0 40px;
   }
-  h2 {
+  h2,
+  h3 {
     margin: 60px 0 20px;
     padding: 0 0 10px;
     border-bottom: 1px solid #f0f0f0;
+    font-weight: normal;
   }
   img {
     max-width: 640px;
