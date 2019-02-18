@@ -20,6 +20,10 @@ module.exports = {
   head: {
     meta: [
       { charset: 'utf-8' },
+      {
+        name: 'google-site-verification',
+        content: 'FnPLcYRmmc9Yg3cHeG58mvrgjNWZe7T-xfPdrJg01sA'
+      },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'index, follow' }
     ],
