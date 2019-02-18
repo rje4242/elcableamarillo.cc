@@ -65,7 +65,7 @@ module.exports = {
     }
   },
   modules: ['@nuxtjs/axios'],
-  plugins: ['~/plugins/vuetify.js', '~/plugins/init.js'],
+  plugins: [{ src: '~plugins/ga.js', ssr: false }, '~/plugins/vuetify.js'],
   css: ['~/assets/style/app.styl'],
   loading: {
     color: '#ffee00',
