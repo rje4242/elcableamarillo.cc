@@ -40,7 +40,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/hola-mundo",
     "title": "¡Hola Mundo!",
     "description": "Primer programa o sketch que hace parpadear el led integrado que lleva la placa Arduino UNO.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/hola-mundo/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/hola-mundo/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -55,7 +55,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/luz-intermitente",
     "title": "Luz intermitente",
     "description": "Parpadeo intermitente de un led con frecuencia de 1 segundo en la placa Arduino UNO.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luz-intermitente/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luz-intermitente/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -70,7 +70,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/luz-alterna",
     "title": "Luz alterna",
     "description": "Apaga y enciende diferentes LEDs utilizando los pines digitales de Arduino UNO.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luz-alterna/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luz-alterna/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -85,7 +85,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/semaforo-simple",
     "title": "Semáforo simple",
     "description": "Práctica que controla los tiempos de un semáforo con Arduino UNO.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-simple/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-simple/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -100,7 +100,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/semaforo-peatones",
     "title": "Semáforo de peatones",
     "description": "Práctica que controla los tiempos de un semáforo para peatones.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-peatones/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-peatones/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -115,7 +115,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/sensor-de-temperatura",
     "title": "Sensor de temperatura",
     "description": "Práctica para programar el sensor de temperatura LM35.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/sensor-de-temperatura/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/sensor-de-temperatura/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -130,7 +130,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/servomotor-0-180",
     "title": "Servomotor 0º-180º",
     "description": "Movimientos de un servomotor SG90 de 0 a 180.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/servomotor-0-180/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/servomotor-0-180/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -145,7 +145,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/rgb-anodo-comun",
     "title": "RGB (ánodo común)",
     "description": "Práctica para controlar un LED RGB de ánodo común.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/rgb-anodo-comun/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/rgb-anodo-comun/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -160,7 +160,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/rgb-catodo-comun",
     "title": "RGB (cátodo común)",
     "description": "Práctica para controlar un LED RGB de cátodo común.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/rgb-catodo-comun/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/rgb-catodo-comun/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -175,7 +175,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/luces-aleatorias",
     "title": "Luces aleatorias",
     "description": "Enciende diferentes intensidades utilizando las salidas PWM de Arduino UNO.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luces-aleatorias/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luces-aleatorias/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -190,7 +190,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/la-guerra-de-las-galaxias",
     "title": "La Guerra de las Galaxias",
     "description": "Reproducir la BSO de esta película utilizando un zumbador.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/la-guerra-de-las-galaxias/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/la-guerra-de-las-galaxias/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -205,7 +205,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/pulsador-simple",
     "title": "Encender un LED mediante pulsador",
     "description": "Encender un LED al pulsar un botón utilizando resistencias en Pull-Down.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/pulsador-simple/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/pulsador-simple/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -220,7 +220,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/medidor-de-distancias",
     "title": "Medidor de distancia con ultrasonidos",
     "description": "Práctica para medir distancias utilizando el sensor de ultrasonidos.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/medidor-de-distancias/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/medidor-de-distancias/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -235,7 +235,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/detector-de-aparcamiento",
     "title": "Detector de aparcamiento con ultrasonidos",
     "description": "Práctica para detectar objetos utilizando el sensor de ultrasonidos.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/detector-de-aparcamiento/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/detector-de-aparcamiento/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -250,7 +250,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/coche-fantastico",
     "title": "Luces del coche fantástico",
     "description": "Efecto de las luces del coche fantástico utilizando 6 diodos LEDs de color rojo.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/coche-fantastico/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/coche-fantastico/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -265,7 +265,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/encendido-nocturno",
     "title": "Encendido nocturno",
     "description": "Práctica para encender un LED utilizando el sensor de luz LDR.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/encendido-nocturno/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/encendido-nocturno/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -280,7 +280,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/rgb-crepuscular",
     "title": "RGB crepuscular",
     "description": "Modificar diferentes luces de un LED RGB utilizando el sensor de luz LDR.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/rgb-crepuscular/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/rgb-crepuscular/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -295,7 +295,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/regulador-de-luz",
     "title": "Regulador de luz",
     "description": "Regular la intensidad de 3 LEDs utilizando un potenciómetro.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/regulador-de-luz/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/regulador-de-luz/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -310,7 +310,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/servomotor-manual",
     "title": "Servomotor con potenciómetro",
     "description": "Movimientos de un servomotor mapeando los ángulos con la posición de un potenciómetro.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/servomotor-manual/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/servomotor-manual/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
