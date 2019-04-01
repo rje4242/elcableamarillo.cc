@@ -15,7 +15,7 @@
     >
       <v-flex
         v-for="training in trainings"
-        :key="training.slug"
+        :key="training.alias"
         xs12
         sm6
         md4
@@ -30,6 +30,7 @@
 
 <script>
 import seo from '@/static/seo.js'
+import trainings from '@/static/trainings.json'
 import Metas from '@/components/Layout/Metas'
 import PageTitle from '@/components/Layout/PageTitle'
 import Training from '@/components/Training'
@@ -40,6 +41,13 @@ export default {
     PageTitle,
     Training
   },
+  data() {
+    return {
+      metas: seo.formacion,
+      trainings: trainings
+    }
+  }
+  /*
   async asyncData({ store, params }) {
     await store.dispatch('training/setTrainings')
 
@@ -50,5 +58,6 @@ export default {
       metas: seo.formacion
     }
   }
+  */
 }
 </script>

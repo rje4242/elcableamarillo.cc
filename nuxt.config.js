@@ -1,4 +1,4 @@
-import trainings from './static/trainings.js'
+import trainings from './static/trainings.json'
 import projects from './static/projects.js'
 
 const nodeExternals = require('webpack-node-externals')
@@ -45,9 +45,10 @@ module.exports = {
         '/practicas/secundaria',
         '/practicas/bachillerato'
       ]
-      const t = await trainings.list.map(t => {
-        return '/formacion/' + t
+      const t = await trainings.map(t => {
+        return `/formacion/${t.alias}`
       })
+
       const p = await projects.primaria.map(p => {
         return '/practicas/primaria/' + p
       })

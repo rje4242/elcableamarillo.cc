@@ -6,11 +6,10 @@
       class="card"
     >
       <router-link 
-        :to="training.link"
+        :to="`/formacion/${training.alias}`"
       >
         <v-img
           :src="training.image"
-          lazy-src="~/static/loading.png"
           aspect-ratio="1.75"
         />
       </router-link>
@@ -20,12 +19,12 @@
         <h3
           class="title mb-3 font-weight-medium"
         >
-          {{ training.data.title }}
+          {{ training.title }}
         </h3>
         <div
           class="subheading font-weight-thin"
         >
-          {{ training.data.description }}
+          {{ training.description }}
         </div>
       </v-card-title>
     </v-card>
