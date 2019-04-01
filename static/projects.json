@@ -617,7 +617,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/cubo-de-leds-2x2x2",
     "title": "Cubo de LEDs 2x2x2",
     "description": "Cubo de 8 LEDs utilizando transistores para simular diferentes efectos de luces.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/cubo-de-leds-2x2x2/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/cubo-de-leds-2x2x2/preview.png",
     "tags": ["mblock", "arduino ide", "secundaria"],
     "authors": [
       {
@@ -632,7 +632,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/maquina-para-dibujar",
     "title": "Máquina para dibujar",
     "description": "Práctica sobre la construcción de una máquina para hacer dibujos.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/maquina-para-dibujar/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/maquina-para-dibujar/preview.png",
     "tags": ["arduino ide", "secundaria"],
     "authors": [
       {
@@ -647,7 +647,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/semaforo-con-microfono",
     "title": "Semáforo con micrófono",
     "description": "Construcción de un semaforo para el control del ruido en el aula con un Arduino NANO.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-con-microfono/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-con-microfono/preview.png",
     "tags": ["mblock", "secundaria"],
     "authors": [
       {
