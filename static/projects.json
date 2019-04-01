@@ -5,7 +5,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/detector-de-presencia",
     "title": "Robot detector de alumnos",
     "description": "Robot mBot capaz de detectar alumnos parados o en movimiento.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/detector-de-presencia/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/detector-de-presencia/preview.png",
     "tags": ["mbot", "secundaria"],
     "authors": [
       {
@@ -24,7 +24,7 @@
     "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/coche-con-mando",
     "title": "Coche con mando",
     "description": "Control de mBot con mando indicando el sentido de la marcha en la pantalla.",
-    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/coche-con-mando/practica.gif",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/coche-con-mando/preview.png",
     "tags": ["mbot", "secundaria"],
     "authors": [
       {
