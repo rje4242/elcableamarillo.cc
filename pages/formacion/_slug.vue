@@ -17,6 +17,7 @@ import trainings from '@/static/trainings.json'
 
 import axios from 'axios'
 import * as matter from 'gray-matter'
+
 import Metas from '@/components/Layout/Metas'
 import Markdown from '@/components/Markdown'
 

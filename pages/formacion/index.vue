@@ -41,23 +41,11 @@ export default {
     PageTitle,
     Training
   },
-  data() {
+  asyncData() {
     return {
       metas: seo.formacion,
       trainings: trainings
     }
   }
-  /*
-  async asyncData({ store, params }) {
-    await store.dispatch('training/setTrainings')
-
-    const trainings = store.state.training.list
-
-    return {
-      trainings: trainings,
-      metas: seo.formacion
-    }
-  }
-  */
 }
 </script>

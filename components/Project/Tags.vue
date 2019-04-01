@@ -11,7 +11,7 @@
       class="pt-2"
     >
       <v-chip
-        v-for="tag in stags()"
+        v-for="tag in tags"
         :key="tag"
       >
         {{ tag }}
@@ -25,16 +25,13 @@ export default {
   name: 'Tags',
   props: {
     tags: {
-      type: String,
-      default: ''
+      type: Array,
+      default: function() {}
     }
   },
   methods: {
     title() {
       return 'Etiquetas'
-    },
-    stags() {
-      return this.tags.split(',')
     }
   }
 }

@@ -6,11 +6,10 @@
       class="card"
     >
       <router-link 
-        :to="project.link"
+        :to="`/practicas/${project.nivel}/${project.alias}`"
       >
         <v-img
           :src="project.image"
-          lazy-src="~/static/loading.png"
           aspect-ratio="1.75"
         />
       </router-link>
@@ -20,12 +19,12 @@
         <h3
           class="title mb-3 font-weight-medium"
         >
-          {{ project.data.title }}
+          {{ project.title }}
         </h3>
         <div
           class="subheading font-weight-thin"
         >
-          {{ project.data.description }}
+          {{ project.description }}
         </div>
       </v-card-title>
     </v-card>

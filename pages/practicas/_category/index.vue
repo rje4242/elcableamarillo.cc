@@ -15,7 +15,7 @@
     >
       <v-flex
         v-for="project in projects"
-        :key="project.slug"
+        :key="project.alias"
         xs12
         sm6
         md4
@@ -30,6 +30,7 @@
 
 <script>
 import seo from '@/static/seo.js'
+import projects from '@/static/projects.json'
 import Metas from '@/components/Layout/Metas'
 import PageTitle from '@/components/Layout/PageTitle'
 import Project from '@/components/Project'
@@ -40,14 +41,12 @@ export default {
     PageTitle,
     Project
   },
-  async asyncData({ store, params }) {
-    await store.dispatch('project/setProjects', params)
-
-    const projects = store.state.project.list
-
+  asyncData({ params }) {
     return {
-      projects: projects,
-      metas: seo[params.category]
+      metas: seo[params.category],
+      projects: projects.filter(p => {
+        return p.nivel === params.category
+      })
     }
   }
 }

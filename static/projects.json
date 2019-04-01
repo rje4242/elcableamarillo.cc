@@ -1,0 +1,663 @@
+[
+  {
+    "nivel": "primaria",
+    "alias": "detector-de-presencia",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/detector-de-presencia",
+    "title": "Robot detector de alumnos",
+    "description": "Robot mBot capaz de detectar alumnos parados o en movimiento.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/detector-de-presencia/practica.gif",
+    "tags": ["mbot", "secundaria"],
+    "authors": [
+      {
+        "name": "María Dolores Simón Fernández",
+        "github": ""
+      },
+      {
+        "name": "José Luis Sánchez García",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "primaria",
+    "alias": "coche-con-mando",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/coche-con-mando",
+    "title": "Coche con mando",
+    "description": "Control de mBot con mando indicando el sentido de la marcha en la pantalla.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/coche-con-mando/practica.gif",
+    "tags": ["mbot", "secundaria"],
+    "authors": [
+      {
+        "name": "Joana Rufete Sáez",
+        "github": ""
+      }
+    ]
+  },
+
+  {
+    "nivel": "secundaria",
+    "alias": "hola-mundo",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/hola-mundo",
+    "title": "¡Hola Mundo!",
+    "description": "Primer programa o sketch que hace parpadear el led integrado que lleva la placa Arduino UNO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/hola-mundo/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "luz-intermitente",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/luz-intermitente",
+    "title": "Luz intermitente",
+    "description": "Parpadeo intermitente de un led con frecuencia de 1 segundo en la placa Arduino UNO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luz-intermitente/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "luz-alterna",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/luz-alterna",
+    "title": "Luz alterna",
+    "description": "Apaga y enciende diferentes LEDs utilizando los pines digitales de Arduino UNO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luz-alterna/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "semaforo-simple",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/semaforo-simple",
+    "title": "Semáforo simple",
+    "description": "Práctica que controla los tiempos de un semáforo con Arduino UNO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-simple/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "semaforo-peatones",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/semaforo-peatones",
+    "title": "Semáforo de peatones",
+    "description": "Práctica que controla los tiempos de un semáforo para peatones.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-peatones/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "sensor-de-temperatura",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/sensor-de-temperatura",
+    "title": "Sensor de temperatura",
+    "description": "Práctica para programar el sensor de temperatura LM35.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/sensor-de-temperatura/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "servomotor-0-180",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/servomotor-0-180",
+    "title": "Servomotor 0º-180º",
+    "description": "Movimientos de un servomotor SG90 de 0 a 180.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/servomotor-0-180/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "rgb-anodo-comun",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/rgb-anodo-comun",
+    "title": "RGB (ánodo común)",
+    "description": "Práctica para controlar un LED RGB de ánodo común.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/rgb-anodo-comun/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "rgb-catodo-comun",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/rgb-catodo-comun",
+    "title": "RGB (cátodo común)",
+    "description": "Práctica para controlar un LED RGB de cátodo común.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/rgb-catodo-comun/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "luces-aleatorias",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/luces-aleatorias",
+    "title": "Luces aleatorias",
+    "description": "Enciende diferentes intensidades utilizando las salidas PWM de Arduino UNO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luces-aleatorias/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "la-guerra-de-las-galaxias",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/la-guerra-de-las-galaxias",
+    "title": "La Guerra de las Galaxias",
+    "description": "Reproducir la BSO de esta película utilizando un zumbador.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/la-guerra-de-las-galaxias/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "pulsador-simple",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/pulsador-simple",
+    "title": "Encender un LED mediante pulsador",
+    "description": "Encender un LED al pulsar un botón utilizando resistencias en Pull-Down.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/pulsador-simple/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "medidor-de-distancias",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/medidor-de-distancias",
+    "title": "Medidor de distancia con ultrasonidos",
+    "description": "Práctica para medir distancias utilizando el sensor de ultrasonidos.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/medidor-de-distancias/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "detector-de-aparcamiento",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/detector-de-aparcamiento",
+    "title": "Detector de aparcamiento con ultrasonidos",
+    "description": "Práctica para detectar objetos utilizando el sensor de ultrasonidos.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/detector-de-aparcamiento/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "coche-fantastico",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/coche-fantastico",
+    "title": "Luces del coche fantástico",
+    "description": "Efecto de las luces del coche fantástico utilizando 6 diodos LEDs de color rojo.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/coche-fantastico/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "encendido-nocturno",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/encendido-nocturno",
+    "title": "Encendido nocturno",
+    "description": "Práctica para encender un LED utilizando el sensor de luz LDR.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/encendido-nocturno/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "rgb-crepuscular",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/rgb-crepuscular",
+    "title": "RGB crepuscular",
+    "description": "Modificar diferentes luces de un LED RGB utilizando el sensor de luz LDR.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/rgb-crepuscular/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "regulador-de-luz",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/regulador-de-luz",
+    "title": "Regulador de luz",
+    "description": "Regular la intensidad de 3 LEDs utilizando un potenciómetro.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/regulador-de-luz/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "servomotor-manual",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/servomotor-manual",
+    "title": "Servomotor con potenciómetro",
+    "description": "Movimientos de un servomotor mapeando los ángulos con la posición de un potenciómetro.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/servomotor-manual/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "theremin-electronico",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/theremin-electronico",
+    "title": "Theremin electrónico",
+    "description": "Obtener diferentes notas musicales dependiendo de la distancia a la que esté el objeto.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/theremin-electronico/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "María Isabel Hernández Monllor",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "luces-de-feria",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/luces-de-feria",
+    "title": "Luces de feria",
+    "description": "Efectos de encendido de nueve LEDs utilizando las salidas Arduino UNO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/luces-de-feria/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Alfredo Velázquez Marín",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "bye-bye",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/bye-bye",
+    "title": "Bye Bye",
+    "description": "Movimientos de un servomotor para mover una cartulina con forma de mano.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/bye-bye/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Emilio Santiago García García",
+        "github": ""
+      },
+      {
+        "name": "Cristina Illán Meseguer",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "make-a-wish",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/make-a-wish",
+    "title": "Make a Wish",
+    "description": "Soplando en el detector de sonido veremos como las semillas del diente de león salen volando.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/make-a-wish/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Natalia Fernández de la Cruz López",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "volando-globos",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/volando-globos",
+    "title": "Volando globos",
+    "description": "Conectando mBlock y arduino para activar salidas digitales.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/volando-globos/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Juan García Guillamón",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "reciclaje",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/reciclaje",
+    "title": "Reciclaje",
+    "description": "Desechar cada residuo en el contenedor adecuado utilizando mBlock y Arduino UNO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/reciclaje/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Josefa García García",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "evita-a-los-fantasmas",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/evita-a-los-fantasmas",
+    "title": "Evita a los fantasmas",
+    "description": "Videojuego de cazafantasmas que se mueve mediante Joystick.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/evita-a-los-fantasmas/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Celia Martínez Soto",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "alarma-personal",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/alarma-personal",
+    "title": "Alarma personal",
+    "description": "Controla una alarma casera utilizando un interruptor para desactivarla.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/alarma-personal/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Pedro José Fernández Martínez",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "sensor-baja-toldo",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/sensor-baja-toldo",
+    "title": "Sensor baja toldo",
+    "description": "Construcción de un sensor para bajar el toldo de una estancia.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/sensor-baja-toldo/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "María Soledad Banegas Carrillo",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "barrera-accionada-por-pulsador",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/barrera-accionada-por-pulsador",
+    "title": "Barrera accionada por pulsador",
+    "description": "Barrera de aparcamiento accionada por pulsador y con luz de semáforo.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/barrera-accionada-por-pulsador/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Antonio Martínez Hernández",
+        "github": ""
+      },
+      {
+        "name": "Heriberto Martínez Martínez",
+        "github": ""
+      },
+      {
+        "name": "Ana Belén Ayala García",
+        "github": ""
+      },
+      {
+        "name": "Mariano Noguera López",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "barrera-de-aparcamiento",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/barrera-de-aparcamiento",
+    "title": "Barrera de aparcamiento",
+    "description": "Barrera de aparcamiento mediante sensor de ultrasonidos.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/barrera-de-aparcamiento/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Alfredo Velázquez Marín",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "juego-de-simon",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/juego-de-simon",
+    "title": "Juego de Simón",
+    "description": "Se pretende implementar una versión del juego Simón, realizado con un Arduino UNO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/juego-de-simon/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Ana María García Caparrós",
+        "github": ""
+      },
+      {
+        "name": "Guillermo José Gómez Espuny",
+        "github": ""
+      },
+      {
+        "name": "David Pérez Díaz",
+        "github": ""
+      },
+      {
+        "name": "Gheorghe Sofletea Motoc",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "semaforo-con-pulsador",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/semaforo-con-pulsador",
+    "title": "Semáforo con pulsador",
+    "description": "Cruce de semáforos de vehículos y de peatones.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-con-pulsador/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Carlota Gómez de Slazar Cateriu",
+        "github": ""
+      },
+      {
+        "name": "Pablo González Fernández",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "preguntar-con-arduino",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/preguntar-con-arduino",
+    "title": "Preguntar con arduino",
+    "description": "Programa de preguntas respuestas utilizando mBlock y Arduino UNO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/preguntar-con-arduino/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Ana Isabel Villena Mota",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "sensor-de-aparcamiento-led",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/sensor-de-aparcamiento-led",
+    "title": "Sensor de aparcamiento LED",
+    "description": "Según se la distancia se va encendiendo una escala de leds de diferentes colores.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/sensor-de-aparcamiento-led/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "José Martínez García",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "extractor-con-sensor-de-temperatura",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/extractor-con-sensor-de-temperatura",
+    "title": "Extractor con sensor de temperatura",
+    "description": "Sistema para refrigerar estancias cuando superan una determinada temperatura.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/extractor-con-sensor-de-temperatura/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Gerónimo Carbonell Capel",
+        "github": ""
+      },
+      {
+        "name": "Pascual Banegas Gil",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "secundaria",
+    "alias": "ascensor-con-indicadores",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/ascensor-con-indicadores",
+    "title": "Ascensor con indicadores luminosos",
+    "description": "El ascensor consta de tres plantas. Cada planta dispone de una fotorresistencia LDR.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/ascensor-con-indicadores/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "María Inmaculada Sánchez Conesa",
+        "github": ""
+      }
+    ]
+  },
+
+  {
+    "nivel": "bachillerato",
+    "alias": "cubo-de-leds-2x2x2",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/cubo-de-leds-2x2x2",
+    "title": "Cubo de LEDs 2x2x2",
+    "description": "Cubo de 8 LEDs utilizando transistores para simular diferentes efectos de luces.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/cubo-de-leds-2x2x2/practica.gif",
+    "tags": ["mblock", "arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "Miguel Ángel Abellán",
+        "github": "migueabellan"
+      }
+    ]
+  },
+  {
+    "nivel": "bachillerato",
+    "alias": "maquina-para-dibujar",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/maquina-para-dibujar",
+    "title": "Máquina para dibujar",
+    "description": "Práctica sobre la construcción de una máquina para hacer dibujos.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/maquina-para-dibujar/practica.gif",
+    "tags": ["arduino ide", "secundaria"],
+    "authors": [
+      {
+        "name": "José Antonio Torrecillas Moya",
+        "github": ""
+      }
+    ]
+  },
+  {
+    "nivel": "bachillerato",
+    "alias": "semaforo-con-microfono",
+    "url": "https://github.com/ElCableAmarillo/Practicas/tree/master/semaforo-con-microfono",
+    "title": "Semáforo con micrófono",
+    "description": "Construcción de un semaforo para el control del ruido en el aula con un Arduino NANO.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Practicas/master/semaforo-con-microfono/practica.gif",
+    "tags": ["mblock", "secundaria"],
+    "authors": [
+      {
+        "name": "Sergio Lino Ferrández Gil",
+        "github": ""
+      },
+      {
+        "name": "Ana Meseguer García",
+        "github": ""
+      }
+    ]
+  }
+]

@@ -1,5 +1,5 @@
 import trainings from './static/trainings.json'
-import projects from './static/projects.js'
+import projects from './static/projects.json'
 
 const nodeExternals = require('webpack-node-externals')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
@@ -48,24 +48,11 @@ module.exports = {
       const t = await trainings.map(t => {
         return `/formacion/${t.alias}`
       })
-
-      const p = await projects.primaria.map(p => {
-        return '/practicas/primaria/' + p
+      const p = await projects.map(p => {
+        return `/practicas/${p.nivel}/${p.alias}`
       })
-      const s = await projects.secundaria.map(p => {
-        return '/practicas/secundaria/' + p
-      })
-      const b = await projects.bachillerato.map(p => {
-        return '/practicas/bachillerato/' + p
-      })
-      return Promise.all([t, h, p, s, b]).then(values => {
-        return [
-          ...values[0],
-          ...values[1],
-          ...values[2],
-          ...values[3],
-          ...values[4]
-        ]
+      return Promise.all([t, h, p]).then(values => {
+        return [...values[0], ...values[1], ...values[2]]
       })
     }
   },

@@ -4,7 +4,7 @@
     grid-list-md
   >
     <Metas
-      :seo="metas"
+      :seo="project"
     />
     <v-layout
       row 
@@ -17,16 +17,16 @@
         order-md9
       >
         <Info
-          :data="project.data" 
+          :data="data" 
         />
         <Authors 
-          :authors="project.data.authors" 
+          :authors="project.authors" 
         />
         <Tags 
-          :tags="project.data.tags" 
+          :tags="project.tags" 
         />
         <Edit 
-          :link="project.editLink" 
+          :link="editLink" 
         />
       </v-flex>
       <v-flex
@@ -36,7 +36,7 @@
         order-md3
       >
         <Markdown 
-          :content="project.content" 
+          :content="content" 
         />
       </v-flex>
     </v-layout>
@@ -44,6 +44,11 @@
 </template>
 
 <script>
+import projects from '@/static/projects.json'
+
+import axios from 'axios'
+import * as matter from 'gray-matter'
+
 import Metas from '@/components/Layout/Metas'
 import Info from '@/components/Project/Info'
 import Authors from '@/components/Project/Authors'
@@ -60,19 +65,24 @@ export default {
     Edit,
     Markdown
   },
-  async asyncData({ store, params }) {
-    await store.dispatch('project/setProject', params)
-
-    const project = store.state.project.item
+  async asyncData({ params }) {
+    const API_EX = 'https://raw.githubusercontent.com/ElCableAmarillo/Practicas'
+    const repo = `${API_EX}/master/${params.slug}`
+    const raw = `${repo}/README.md`
+    const doc = await axios.get(raw).then(res => {
+      const doc = matter(res.data)
+      doc.data.category = params.category
+      return doc
+    })
 
     return {
-      project: project,
-      metas: {
-        title: project.data.title,
-        description: project.data.description,
-        keywords: project.data.tags,
-        image: project.image
-      }
+      project: projects.find(t => {
+        return t.alias === params.slug
+      }),
+      data: doc.data,
+      content: doc.content.split('![](').join('![](' + repo + '/'),
+      editLink: `https://github.com/ElCableAmarillo/Practicas/tree/master/
+${params.slug}`
     }
   }
 }
