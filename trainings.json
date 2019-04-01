@@ -1,0 +1,26 @@
+[
+  {
+    "alias": "echidna-shield",
+    "url": "https://github.com/ElCableAmarillo/Formacion/tree/master/echidna-shield",
+    "title": "Echidna Shield",
+    "description": "Materiales utilizados durante el curso presencial de formación para maestros y maestras del CPR Murcia.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Formacion/master/echidna-shield/preview.png",
+    "tags": ["echidna shield", "primaria"]
+  },
+  {
+    "alias": "test-de-echidna-shield",
+    "url": "https://github.com/ElCableAmarillo/Formacion/tree/master/test-de-echidna-shield",
+    "title": "Test de Echidna Shield",
+    "description": "Programa creado en Arduino para probar que la placa Echidna Funciona correctamente.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Formacion/master/test-de-echidna-shield/preview.png",
+    "tags": ["echidna shield", "test", "primaria"]
+  },
+  {
+    "alias": "configuracion-de-arduino-101",
+    "url": "https://github.com/ElCableAmarillo/Formacion/tree/master/configuracion-de-arduino-101",
+    "title": "Configuración de Arduino 101",
+    "description": "Instalación y configuración de la placa de Arduino 101 de la 3ª Edición de El Cable Amarillo.",
+    "image": "https://raw.githubusercontent.com/ElCableAmarillo/Formacion/master/configuracion-de-arduino-101/preview.png",
+    "tags": ["arduino 101", "secundaria"]
+  }
+]
